@@ -1,0 +1,2 @@
+class PetPhoto < ApplicationRecord
+end
