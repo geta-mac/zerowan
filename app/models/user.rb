@@ -6,4 +6,5 @@ class User < ApplicationRecord
   has_many :favorites
   has_many :dm_rooms
   has_many :direct_messages, through: :dm_rooms
+  has_many :pets
 end
