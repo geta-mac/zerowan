@@ -8,10 +8,9 @@ one:
   character: MyString
   avairable_area: MyString
   animal_type: 1
-  description: false
+  description: MyText
   pic_id: 1
   video_id: 1
-  favorite_id: 1
 
 two:
   name: MyString
@@ -21,7 +20,6 @@ two:
   character: MyString
   avairable_area: MyString
   animal_type: 1
-  description: false
+  description: MyText
   pic_id: 1
   video_id: 1
-  favorite_id: 1
