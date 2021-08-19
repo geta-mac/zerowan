@@ -24,7 +24,7 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
-gem 'bulma-rails', '~> 0.4.2'
+# gem 'bulma-rails', '~> 0.4.2'
 gem 'jquery-rails'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
