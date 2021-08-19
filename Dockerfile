@@ -5,9 +5,7 @@ RUN apt-get update && apt-get install -y curl apt-transport-https wget && \
   echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
   apt-get update && apt-get install -y yarn \
   imagemagick
-# Node.jsをインストール
-# RUN curl -sL https://deb.nodesource.com/setup_7.x | bash - && \
-#   apt-get install nodejs
+RUN apt-get update -qq && apt-get install -y nodejs postgresql-client yarn
 RUN mkdir /myapp
 WORKDIR /myapp
 COPY Gemfile /myapp/Gemfile
