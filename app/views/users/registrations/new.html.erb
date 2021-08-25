@@ -22,7 +22,7 @@
               autofocus: "true",
               required: "",
               autocomplete: "name",
-              placeholder: "侍 太郎"
+              placeholder: "山田太郎"
             %>
 
             <% if resource.errors.messages[:name].present? %>
@@ -92,7 +92,7 @@
               f.text_field :phone,
               class: "form-control #{"is-invalid" if resource.errors.messages[:phone].present? } samazon-login-input",
               required: "",
-              placeholder: "03-5790-9039"
+              placeholder: "0357909039"
             %>
           </div>
         </div>
@@ -135,20 +135,30 @@
         </div>
 
         <div class="form-group row">
-        <%= f.label :birth_date, "", class: "col-md-5 col-form-label text-md-left" do %>
-          生年月日
-        <% end %>
-          <div class="col-md-7">
-          <%= raw sprintf(
-            f.date_select(
-              :birth_date,
-              use_month_numbers: true,
-              start_year: 1930,
-              end_year: (Time.now.year - 18),
-              default: Date.new(1989, 1, 1),
-              date_separator: '%s'),
-            '年 ', '月 ') + '日' %>
-          </div>
+          <%= f.label :birth_date, "", class: "col-md-5 col-form-label text-md-left" do %>
+            生年月日
+          <% end %>
+            <div class="col-md-7">
+              <%=
+                raw sprintf(
+                f.date_select(
+                :birth_date,
+                use_month_numbers: true,
+                start_year: 1900,
+                end_year: (Time.now.year - 2),
+                default: Date.new(1989, 1, 1),
+                date_separator: '%s'),'年 ', '月 ') + '日'
+                %>
+            </div>
+        </div>
+
+        <div class="form-group row">
+          <%= f.label :raising_experience, class: "col-md-5 col-form-label text-md-left" do %>
+            生き物の飼育経験
+          <% end %>
+            <div class="col-md-7">
+              <%= f.select :raising_experience, [['無し',false],['有り',true]], include_blank: false %>
+            </div>
         </div>
 
         <div class="form-group">

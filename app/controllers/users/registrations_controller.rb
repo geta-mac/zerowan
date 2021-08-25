@@ -49,6 +49,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
         :address,
         :phone,
         :raising_experience,
+        :birth_date,
         :isfrozen,
         :password,
         :password_confirmation
@@ -65,6 +66,7 @@ class Users::RegistrationsController < Devise::RegistrationsController
         :address,
         :phone,
         :raising_experience,
+        :birth_date,
         :isfrozen,
         :password,
         :password_confirmation
