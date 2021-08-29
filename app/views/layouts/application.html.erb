@@ -34,6 +34,7 @@
       <% if user_signed_in? %>
       <li>ユーザー</li>
       <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+      <li><%= link_to "マイページ", mypage_users_path %></li>
     <% elsif admin_signed_in? %>
       <li>管理者</li>
       <li><%= link_to "ログアウト", destroy_admin_session_path, method: :delete %></li>
