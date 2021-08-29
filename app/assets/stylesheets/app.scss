@@ -39,3 +39,22 @@ h3, .h3 {
   border-radius: .25rem;
   transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
 }
+
+.side {
+  background-color:#ff838b;
+  text-align:center;
+}
+
+.content {
+  background-color:#b3d874;
+  text-align:center;
+  width: 75%;
+}
+
+body {
+  display:flex;
+}
+
+li {
+  list-style-type: none;
+}
