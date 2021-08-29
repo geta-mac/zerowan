@@ -1,7 +1,12 @@
 <h2>Resend unlock instructions</h2>
 
-<%= form_with model: @admin, url: admin_unlock_path, html: { method: :post }, local: true do |f| %>
-  <%= render "admins/shared/error_messages", resource: resource %>
+<%= form_with
+  model: @user,
+  url: user_unlock_path,
+  html: { method: :post },
+  local: true do |f|
+  %>
+  <%= render "users/shared/error_messages", resource: resource %>
 
   <div class="field">
     <%= f.label :email %><br />
@@ -13,4 +18,4 @@
   </div>
 <% end %>
 
-<%= render "admins/shared/links" %>
+<%= render "users/shared/links" %>
