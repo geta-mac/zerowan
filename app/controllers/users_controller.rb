@@ -1,17 +1,15 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!
+  before_action :set_user
+
+  def mypage
+  end
 
   def edit
-    @user = User.find(params[:id])
   end
 
   def update
-    @user = User.find(params[:id])
-    if @user.update(user_params)
-      redirect_to request.referer
-    else
-      render :new
-    end
+    @user.update_without_password(user_params)
+    redirect_to mypage_users_url
   end
 
   def destroy
@@ -21,8 +19,13 @@ class UsersController < ApplicationController
   end
 
   private
+
+  def set_user
+    @user = current_user
+  end
+
   def user_params
-    params.require(:user).permit(
+    params.permit(
       :email,
       :name,
       :address,

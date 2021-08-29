@@ -21,8 +21,10 @@ Rails.application.routes.draw do
   root 'top#index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   resources :users, only: [:edit, :update, :destroy] do
-  member do
-    get 'mypage', to: 'users#mypage'
+    collection do
+      get "mypage", :to => "users#mypage"
+      get "mypage/edit", :to => "users#edit"
+      put "mypage", :to => "users#update"
     end
   end
 end
