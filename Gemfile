@@ -26,6 +26,7 @@ gem 'devise-i18n'
 gem 'devise-i18n-views'
 # gem 'bulma-rails', '~> 0.4.2'
 gem 'jquery-rails'
+gem 'active_hash'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

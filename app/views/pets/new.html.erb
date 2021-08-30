@@ -14,7 +14,7 @@
           地域１
         <% end %>
         <div class="col-md-7">
-        <%= f.select :prefecture, Pet.avairable_areas.keys, {} %>
+        <%= f.collection_select(:avairable_area, Prefecture.all, :id, :name, {}, {}) %>
         </div>
       </div>
 
