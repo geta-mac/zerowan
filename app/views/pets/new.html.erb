@@ -1,0 +1,110 @@
+<div class="container">
+  <h1>投稿画面</h1>
+    <%= form_with model: @pet do |f| %>
+      <div class="form-group row">
+      <%= f.label :name, "", class: "col-md-5 col-form-label text-md-left" do %>
+        カテゴリー
+      <% end %>
+        <div class="col-md-7">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <%= f.label :avairable_area, "", class: "col-md-5 col-form-label text-md-left" do %>
+          地域１
+        <% end %>
+        <div class="col-md-7">
+        <%= f.select :prefecture, Pet.avairable_areas.keys, {} %>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <%= f.label :name, "", class: "col-md-5 col-form-label text-md-left" do %>
+          地域２
+        <% end %>
+        <div class="col-md-7">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <%= f.label :name, "", class: "col-md-5 col-form-label text-md-left" do %>
+          名前
+        <% end %>
+        <div class="col-md-7">
+        <%=f.text_field :name,
+          class: "form-control zerowan-login-input",
+          autofocus: "true",
+          required: "",
+          autocomplete: "name"
+          %>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <%= f.label :name, "", class: "col-md-5 col-form-label text-md-left" do %>
+          性別
+        <% end %>
+        <div class="col-md-7">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <%= f.label :name, "", class: "col-md-5 col-form-label text-md-left" do %>
+          去勢・避妊手術
+        <% end %>
+        <div class="col-md-7">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <%= f.label :name, "", class: "col-md-5 col-form-label text-md-left" do %>
+          年齢
+        <% end %>
+        <div class="col-md-7">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <%= f.label :name, "", class: "col-md-5 col-form-label text-md-left" do %>
+          性格
+        <% end %>
+        <div class="col-md-7">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <%= f.label :name, "", class: "col-md-5 col-form-label text-md-left" do %>
+          コメント
+        <% end %>
+        <div class="col-md-7">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <%= f.label :name, "", class: "col-md-5 col-form-label text-md-left" do %>
+          画像
+        <% end %>
+        <div class="col-md-7">
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <%= f.label :name, "", class: "col-md-5 col-form-label text-md-left" do %>
+          動画
+        <% end %>
+        <div class="col-md-7">
+        </div>
+      </div>
+
+      <div class='btn-toolbar w-100' >
+        <button type="button"
+          class="btn btn-outline-dark col-6"
+          style="background-color:white"
+          >
+          <%= link_to("戻る", pets_path, {class: "btn-style-change"}) %>
+        </button>
+        <button type="submit" class="btn submit-button btn-success col-6">
+          投稿する
+        </button>
+      </div>
+  <% end %>

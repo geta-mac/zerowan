@@ -6,7 +6,7 @@ class CreatePets < ActiveRecord::Migration[6.1]
       t.boolean :castration
       t.string :category
       t.string :character
-      t.string :avairable_area
+      t.integer :avairable_area
       t.integer :animal_type
       t.text :description
       t.string :pic_id

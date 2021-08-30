@@ -82,7 +82,7 @@ ActiveRecord::Schema.define(version: 2021_08_23_125010) do
     t.boolean "castration"
     t.string "category"
     t.string "character"
-    t.string "avairable_area"
+    t.integer "avairable_area"
     t.integer "animal_type"
     t.text "description"
     t.string "pic_id"
