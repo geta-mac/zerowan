@@ -9,8 +9,8 @@ class CreatePets < ActiveRecord::Migration[6.1]
       t.string :avairable_area
       t.integer :animal_type
       t.text :description
-      t.integer :pic_id
-      t.integer :video_id
+      t.string :pic_id
+      t.string :video_id
 
       t.timestamps
     end

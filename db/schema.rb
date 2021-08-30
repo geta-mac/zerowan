@@ -85,8 +85,8 @@ ActiveRecord::Schema.define(version: 2021_08_23_125010) do
     t.string "avairable_area"
     t.integer "animal_type"
     t.text "description"
-    t.integer "pic_id"
-    t.integer "video_id"
+    t.string "pic_id"
+    t.string "video_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
