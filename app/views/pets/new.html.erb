@@ -6,12 +6,17 @@
         カテゴリー
       <% end %>
         <div class="col-md-7">
-        <%= f.select :category, [["犬","犬"],["猫","猫"],["その他","その他"]], include_blank: "選択してください" %>
+        <%= f.select :category,
+          [["犬","犬"],["猫","猫"],["その他","その他"]],
+          include_blank: "選択してください"
+          %>
         </div>
       </div>
     <hr>
       <div class="form-group row">
-        <%= f.label :avairable_area, "", class: "col-md-5 col-form-label text-md-left" do %>
+        <%= f.label :avairable_area,
+          "",
+          class: "col-md-5 col-form-label text-md-left" do %>
           受け渡し地域
         <% end %>
         <div class="col-md-7">
@@ -36,7 +41,10 @@
           性別
         <% end %>
         <div class="col-md-7 mt-1">
-        <%= f.select :gender, [["オス",1],["メス",2],["その他",3],["不明",4]], include_blank: "選択してください" %>
+        <%= f.select :gender,
+          [["オス",1],["メス",2],["その他",3],["不明",4]],
+          include_blank: "選択してください"
+          %>
         </div>
       </div>
     <hr>
@@ -63,15 +71,22 @@
       </div>
     <hr>
       <div class="form-group row">
-        <%= f.label :name, "", class: "col-md-5 col-form-label text-md-left" do %>
+        <%= f.label :character, "", class: "col-md-5 col-form-label text-md-left" do %>
           性格
         <% end %>
         <div class="col-md-7">
+          <%= f.select :character,
+            [["やんちゃ","やんちゃ"],["大人しい","大人しい"]],
+            include_blank: "選択してください"
+            %>
         </div>
       </div>
     <hr>
       <div class="form-group row">
-        <%= f.label :description, "", class: "col-md-5 col-form-label text-md-left" do %>
+        <%= f.label :description,
+          "",
+          class:
+          "col-md-5 col-form-label text-md-left" do %>
           コメント
         <% end %>
         <div class="col-md-7">
