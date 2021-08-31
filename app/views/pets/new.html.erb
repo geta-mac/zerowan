@@ -2,13 +2,14 @@
   <h1>投稿画面</h1>
     <%= form_with model: @pet do |f| %>
       <div class="form-group row">
-      <%= f.label :name, "", class: "col-md-5 col-form-label text-md-left" do %>
+      <%= f.label :category, "", class: "col-md-5 col-form-label text-md-left" do %>
         カテゴリー
       <% end %>
         <div class="col-md-7">
+        <%= f.select :category, [["犬","犬"],["猫","猫"],["その他","その他"]], include_blank: "選択してください" %>
         </div>
       </div>
-
+    <hr>
       <div class="form-group row">
         <%= f.label :avairable_area, "", class: "col-md-5 col-form-label text-md-left" do %>
           受け渡し地域
@@ -17,7 +18,7 @@
         <%= f.collection_select(:avairable_area, Prefecture.all, :id, :name, {}, {}) %>
         </div>
       </div>
-
+    <hr>
       <div class="form-group row">
         <%= f.label :name, "", class: "col-md-5 col-form-label text-md-left" do %>
           名前
@@ -25,23 +26,24 @@
         <div class="col-md-7">
         <%=f.text_field :name,
           class: "form-control zerowan-login-input",
-          autofocus: "true",
-          required: "",
           autocomplete: "name"
           %>
         </div>
       </div>
-
+    <hr>
       <div class="form-group row">
-        <%= f.label :name, "", class: "col-md-5 col-form-label text-md-left" do %>
+        <%= f.label :gender, "", class: "col-md-5 col-form-label text-md-left" do %>
           性別
         <% end %>
-        <div class="col-md-7">
+        <div class="col-md-7 mt-1">
+        <%= f.select :gender, [["オス",1],["メス",2],["その他",3],["不明",4]], include_blank: "選択してください" %>
         </div>
       </div>
-
+    <hr>
       <div class="form-group row">
-        <%= f.label :name, "castration", class: "col-md-5 col-form-label text-md-left" do %>
+        <%= f.label :name,
+          "castration",
+          class: "col-md-5 col-form-label text-md-left" do %>
           去勢・避妊手術
         <% end %>
         <div class="col-md-7">
@@ -51,7 +53,7 @@
         <label style="display: inline-block">無し</label>
         </div>
       </div>
-
+    <hr>
       <div class="form-group row">
         <%= f.label :name, "", class: "col-md-5 col-form-label text-md-left" do %>
           年齢
@@ -59,7 +61,7 @@
         <div class="col-md-7">
         </div>
       </div>
-
+    <hr>
       <div class="form-group row">
         <%= f.label :name, "", class: "col-md-5 col-form-label text-md-left" do %>
           性格
@@ -67,15 +69,18 @@
         <div class="col-md-7">
         </div>
       </div>
-
+    <hr>
       <div class="form-group row">
-        <%= f.label :name, "", class: "col-md-5 col-form-label text-md-left" do %>
+        <%= f.label :description, "", class: "col-md-5 col-form-label text-md-left" do %>
           コメント
         <% end %>
         <div class="col-md-7">
+        <%=f.text_field :description,
+          class: "form-control zerowan-login-input"
+          %>
         </div>
       </div>
-
+    <hr>
       <div class="form-group row">
         <%= f.label :name, "", class: "col-md-5 col-form-label text-md-left" do %>
           画像
@@ -83,7 +88,7 @@
         <div class="col-md-7">
         </div>
       </div>
-
+    <hr>
       <div class="form-group row">
         <%= f.label :name, "", class: "col-md-5 col-form-label text-md-left" do %>
           動画
@@ -91,7 +96,7 @@
         <div class="col-md-7">
         </div>
       </div>
-
+    <hr>
       <div class='btn-toolbar w-100' >
         <button type="button"
           class="btn btn-outline-dark col-6"
