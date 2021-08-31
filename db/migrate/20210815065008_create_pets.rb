@@ -11,6 +11,7 @@ class CreatePets < ActiveRecord::Migration[6.1]
       t.text :description
       t.string :pic_id
       t.string :video_id
+      t.integer :gender
 
       t.timestamps
     end

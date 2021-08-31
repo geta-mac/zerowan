@@ -87,6 +87,7 @@ ActiveRecord::Schema.define(version: 2021_08_23_125010) do
     t.text "description"
     t.string "pic_id"
     t.string "video_id"
+    t.integer "gender"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
