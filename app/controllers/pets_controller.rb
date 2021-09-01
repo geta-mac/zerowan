@@ -38,7 +38,8 @@ class PetsController < ApplicationController
             :animal_type,
             :description,
             :pic_id,
-            :video_id
+            :video_id,
+            :gender
             )
     end
 end

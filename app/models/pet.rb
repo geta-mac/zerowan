@@ -8,4 +8,5 @@ class Pet < ApplicationRecord
   # active_hashを使用して都道府県をプルダウン
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :prefecture
+  belongs_to :pet_type
 end
