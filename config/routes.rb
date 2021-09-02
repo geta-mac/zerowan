@@ -30,4 +30,6 @@ Rails.application.routes.draw do
 
   resources :pets
 
+  resources :top, only: [:index, :show]
+
 end
