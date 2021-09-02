@@ -7,7 +7,7 @@
     <%= pet.animal_type %>
     <%= pet.character %>
     <%= pet.gender %>
-    <%= pet.pic_id %>
+    <%= image_tag pet.pic_id.url %>
     <%= pet.video_id %>
     <%= pet.description %>
     <%= link_to "詳細", pet_path(pet) %>

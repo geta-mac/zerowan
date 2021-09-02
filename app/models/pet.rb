@@ -1,4 +1,6 @@
 class Pet < ApplicationRecord
+  mount_uploader :pic_id, ImageUploader
+
   belongs_to :user
   has_many :pet_photos
   has_many :pet_videos
