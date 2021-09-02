@@ -1,2 +1,12 @@
-<h1>Pets#show</h1>
-<p>Find me in app/views/pets/show.html.erb</p>
+<%= @pet.name %>
+<%= @pet.age %>
+<%= @pet.castration %>
+<%= @pet.category %>
+<%= @pet.animal_type %>
+<%= @pet.character %>
+<%= @pet.gender %>
+<%= @pet.pic_id %>
+<%= @pet.video_id %>
+<%= @pet.description %>
+<%= link_to "編集", edit_pet_path(@pet) %>
+<%= link_to "戻る", pets_path %>

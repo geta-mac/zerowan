@@ -57,10 +57,10 @@
           去勢・避妊手術
         <% end %>
         <div class="col-md-7">
-        <input type="radio" value="true" name="pet[castration]">
-        <label style="display: inline-block">有り</label>
-        <input type="radio" value="false" name="pet[castration]">
-        <label style="display: inline-block">無し</label>
+          <%= f.radio_button :castration, :true %>
+          <%= f.label :castration, "有り", {value: :true, style: "display: inline-block;"} %>
+          <%= f.radio_button :castration, :false %>
+          <%= f.label :castration, "無し", {value: :false, style: "display: inline-block;"} %>
         </div>
       </div>
     <hr>
