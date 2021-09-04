@@ -9,8 +9,11 @@ class CreatePets < ActiveRecord::Migration[6.1]
       t.integer :avairable_area
       t.integer :animal_type
       t.text :description
-      t.string :pic_id
-      t.string :video_id
+      t.string :image1
+      t.string :image2
+      t.string :image3
+      t.string :image4
+      t.string :video
       t.integer :gender
 
       t.timestamps

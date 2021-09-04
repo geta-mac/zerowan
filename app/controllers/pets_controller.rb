@@ -42,8 +42,11 @@ class PetsController < ApplicationController
             :avairable_area,
             :animal_type,
             :description,
-            :pic_id,
-            :video_id,
+            :image1,
+            :image2,
+            :image3,
+            :image4,
+            :video,
             :gender
             )
     end
