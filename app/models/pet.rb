@@ -12,8 +12,7 @@ class Pet < ApplicationRecord
   has_many :dm_rooms
 
   # index,showの表示を数字ではなくオス、メスなどで表示
-  # enum gender:  { "オス": 1, "メス": 2, "その他": 3 , "不明": 4}
- 
+  enum gender: { "オス": 1, "メス": 2, "その他": 3 , "不明": 4}
   
   # active_hashを使用して都道府県をプルダウン
   extend ActiveHash::Associations::ActiveRecordExtensions

@@ -1,11 +1,14 @@
-<%= @pet.name %>
-<%= @pet.age %>
-<%= @pet.castration %>
-<%= @pet.category %>
-<%= @pet.animal_type %>
-<%= @pet.character %>
-<%= @pet.gender %>
-<%= @pet.pic_id %>
-<%= @pet.video_id %>
-<%= @pet.description %>
-<%= link_to "戻る", top_index_path %>
+<% @pets.each do |pet| %>
+    <%= pet.name %>
+    <%= pet.age %>
+    <%= pet.castration %>
+    <%= pet.category %>
+    <%= pet.animal_type %>
+    <%= pet.character %>
+    <%= pet.gender %>
+    <%= image_tag pet.image1.url %>
+    <%= pet.video %>
+    <%= pet.description %>
+    <%= link_to "詳細", top_path(pet) %>
+    <br>
+  <% end %>
