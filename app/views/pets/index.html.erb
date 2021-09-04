@@ -1,17 +1,22 @@
 <h1>Pets#index</h1>
 <% @pets.each do |pet| %>
-    <%= pet.name %>
-    <%= pet.age %>
-    <%= pet.castration %>
-    <%= pet.category %>
-    <%= pet.animal_type %>
-    <%= pet.character %>
-    <%= pet.gender %>
-    <%= pet.pic_id %>
-    <%= pet.video_id %>
-    <%= pet.description %>
-    <%= link_to "詳細", pet_path(pet) %>
-    <%= link_to "編集", edit_pet_path(pet) %>
+  <ul>
+    <li>名前：<%= pet.name %></li>
+    <li>種類：<%= pet.category %></li>
+    <li>種別：<%= pet.animal_type %></li>
+    <li>性別：<%= pet.gender %></li>
+    <li>年齢：<%= pet.age %></li>
+    <li>去勢：<%= pet.castration %></li>
+    <li>性格：<%= pet.character %></li>
+    <li>写真1：<%= image_tag pet.image1.url %></li>
+    <li>写真2：<%= image_tag pet.image2.url %></li>
+    <li>写真3：<%= image_tag pet.image3.url %></li>
+    <li>写真4：<%= image_tag pet.image4.url %></li>
+    <li>動画：<%= pet.video %></li>
+    <li>詳細：<%= pet.description %></li>
+    <li><%= link_to "詳細", pet_path(pet) %></li>
+    <li><%= link_to "編集", edit_pet_path(pet) %></li>
     <br>
+    </ul>
   <% end %>
 <%= link_to "新規投稿", new_pet_path %>

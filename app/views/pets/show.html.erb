@@ -1,12 +1,20 @@
-<%= @pet.name %>
-<%= @pet.age %>
-<%= @pet.castration %>
-<%= @pet.category %>
-<%= @pet.animal_type %>
-<%= @pet.character %>
-<%= @pet.gender %>
-<%= @pet.pic_id %>
-<%= @pet.video_id %>
-<%= @pet.description %>
-<%= link_to "編集", edit_pet_path(@pet) %>
-<%= link_to "戻る", pets_path %>
+<div>
+    <ul>
+        <li><%= @pet.name %></li>
+        <li><%= @pet.age %></li>
+        <li><%= @pet.castration %></li>
+        <li><%= @pet.category %></li>
+        <li><%= @pet.animal_type %></li>
+        <li><%= @pet.character %></li>
+        <li><%= @pet.gender %></li>
+        <li><%= image_tag @pet.iamge1.url %></li>
+        <li><%= image_tag @pet.iamge2.url %></li>
+        <li><%= image_tag @pet.iamge3.url %></li>
+        <li><%= image_tag @pet.iamge4.url %></li>
+        <li><%= @pet.video %></li>
+        <li><%= @pet.description %></li>
+    </ul>
+
+    <%= link_to "編集", edit_pet_path(@pet) %>
+    <%= link_to "戻る", pets_path %>
+</div>
