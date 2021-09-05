@@ -31,5 +31,6 @@ Rails.application.routes.draw do
   resources :pets
 
   resources :top, only: [:index, :show]
-
+  resources :reactions, only: [:create]
+  resources :matching, only: [:index]
 end
