@@ -9,5 +9,7 @@ class User < ApplicationRecord
   has_many :direct_messages, through: :dm_rooms
   has_many :pets
   has_many :reactions
+  has_many :chat_room_users
+  has_many :chat_rooms, through: :chat_room_users
 
 end
