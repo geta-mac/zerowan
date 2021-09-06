@@ -2,13 +2,13 @@
 
 <%= form_with model: @admin, url: admin_session_path, local: true do |f| %>
   <div class="field">
-  <%= f.label :name %><br />
-  <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+  <%= f.label :email %><br />
+  <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder: "メールアドレス" %>
   </div>
 
   <div class="field">
     <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+    <%= f.password_field :password, autofocus: "true",autocomplete: "current-password",placeholder: "パスワード" %>
   </div>
 
   <% if devise_mapping.rememberable? %>
