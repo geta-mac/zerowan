@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   end
 
   root 'top#index'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
   resources :users, only: [:edit, :update, :destroy] do
     collection do
       get "mypage", :to => "users#mypage"
@@ -27,4 +27,9 @@ Rails.application.routes.draw do
       put "mypage", :to => "users#update"
     end
   end
+
+  resources :pets
+
+  resources :top, only: [:index, :show]
+
 end
