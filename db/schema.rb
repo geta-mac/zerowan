@@ -102,10 +102,10 @@ ActiveRecord::Schema.define(version: 2021_09_05_085731) do
 
   create_table "pets", force: :cascade do |t|
     t.string "name"
-    t.string "age"
-    t.boolean "castration"
-    t.string "category"
-    t.string "character"
+    t.integer "age"
+    t.integer "castration"
+    t.integer "category"
+    t.integer "character"
     t.integer "avairable_area"
     t.integer "animal_type"
     t.text "description"
