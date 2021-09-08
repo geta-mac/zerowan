@@ -1,2 +1,8 @@
-@import "bootstrap";
+@import '~bootstrap/scss/bootstrap';
 
+@import "app";
+@import "matching";
+@import "chat_rooms";
+@import "pets";
+@import "top";
+@import "user";
