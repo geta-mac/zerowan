@@ -5,7 +5,10 @@ Rails.application.routes.draw do
     get 'users/edit'
     get 'base/show'
   end
-  
+    get 'posts/index'	
+    get 'posts/show'	
+    get 'posts/edit'
+
   devise_for :admins, controllers: {
     sessions: 'admins/sessions',
     passwords: 'admins/passwords',
@@ -28,5 +31,10 @@ Rails.application.routes.draw do
       get "mypage/edit", :to => "users#edit"
       put "mypage", :to => "users#update"
     end
+
+    namespace :admins do	
+      resources :posts	
+      resources :users	
+      end
   end
 end
