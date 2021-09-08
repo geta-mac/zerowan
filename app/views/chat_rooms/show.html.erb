@@ -1,7 +1,11 @@
 <p>チャットルームページ</p>
 
+<div>
+<h4>問い合わせ相手：<%= @chat_room_user.name %>さん</h3>
+</div>
+
 <div id='chat-messages'>
-  <%= render @chat_messages %>
+  <%= render @chat_messages %><br>
 </div>
 
 <form>
