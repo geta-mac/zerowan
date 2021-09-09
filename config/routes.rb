@@ -35,6 +35,7 @@ Rails.application.routes.draw do
     namespace :admins do	
       resources :posts	
       resources :users	
+      resources :base
       end
   end
 end

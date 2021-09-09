@@ -1,7 +1,7 @@
 class Admins::BaseController < ApplicationController
   before_action :authenticate_admin!
-  layout 'admins/layouts/application'
-
+  #layout 'admins/layouts/application'
+  
   private
 
   #ログインしてないとき実行される（sorceryのメソッド）
