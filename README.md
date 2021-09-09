@@ -25,5 +25,3 @@ Things you may want to cover:
 # rubyemon-test
 # rubyemon-test
 
-下記を参考にさせていただいていおります。
-参考HP https://qiita.com/sssssatou/items/2e6606e3ddf9b246a0fb
