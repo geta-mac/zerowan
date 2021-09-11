@@ -11,7 +11,7 @@
     <li><%= @pet.description %></li>
     <li><%= link_to "戻る", top_index_path %></li>
     <li>
-      <div id="favorite-btn-<%= @pet.id %>">
+      <div id="favorite_<%= @pet.id %>">
         <%= render 'favorites/favorite', pet: @pet %>
       </div>
   </ul>

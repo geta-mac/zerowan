@@ -1,4 +1,4 @@
-class FavoriteController < ApplicationController
+class FavoritesController < ApplicationController
   before_action :set_pet
   before_action :authenticate_user!
 

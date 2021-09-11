@@ -1,6 +1,6 @@
 <div id="<%= @pet.id %> favorite">
   <% if !Favorite.exists?(user: current_user, pet_id: @pet.id)    %>
-    <%= link_to pet_favorites_path(@pet), method: :pet, remote: true, class: "favorite-btn favorite-pet" do %>
+    <%= link_to pet_favorites_path(@pet), method: :post, remote: true, class: "favorite-btn favorite-pet" do %>
       <div class="i far fa-thumbs-up">
         <span>お気に入り</span>
         <%= @pet.favorites.length %>
