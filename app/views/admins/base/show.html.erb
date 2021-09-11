@@ -1,24 +1,15 @@
-<!DOCTYPE html>
-<html>
-<head>
-</head>
-<body>
- <table border="1">
+<h2>管理者メニュー</h2>
+<table border="1" width="50%">
     <tr>
-      <th>管理者メニュー</th>
+      <td><%= link_to 'ユーザー一覧、削除', admins_users_index_path %></td>
     </tr>
     <tr>
-      <td><%= link_to “ユーザー一覧、削除”,admins_users_index_path %></td>
+      <td><%= link_to '投稿一覧、削除', admins_users_index_path %></td>
     </tr>
     <tr>
-      <td>ユーザーの投稿一覧、削除</td>
+      <td><%= link_to '検索', admins_users_index_path %></td>
     </tr>
     <tr>
-      <td>検索</td>
-    </tr>
-    <tr>
-      <td>ログアウト</td>
+      <td><%= link_to 'ログアウト', destroy_admin_session_path %></td>
     </tr>
   </table>
-</body>
-</html>
