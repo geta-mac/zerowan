@@ -1,6 +1,6 @@
 class Admins::UsersController < ApplicationController
   before_action :set_user
-
+  
   def mypage
   end
 
@@ -19,6 +19,7 @@ class Admins::UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     @user.destroy
+    flash[:success] = "User deleted"
     redirect_to request.referer
   end
 

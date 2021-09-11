@@ -102,19 +102,15 @@ ActiveRecord::Schema.define(version: 2021_09_05_085731) do
 
   create_table "pets", force: :cascade do |t|
     t.string "name"
-    t.integer "age"
-    t.integer "castration"
-    t.integer "category"
-    t.integer "character"
-    t.integer "avairable_area"
+    t.string "age"
+    t.boolean "castration"
+    t.string "category"
+    t.string "character"
+    t.string "avairable_area"
     t.integer "animal_type"
     t.text "description"
-    t.string "image1"
-    t.string "image2"
-    t.string "image3"
-    t.string "image4"
-    t.string "video"
-    t.integer "gender"
+    t.integer "pic_id"
+    t.integer "video_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "user_id", null: false
@@ -144,6 +140,7 @@ ActiveRecord::Schema.define(version: 2021_09_05_085731) do
     t.string "phone"
     t.boolean "raising_experience"
     t.boolean "isfrozen", default: false
+    t.boolean "admins", default: false
     t.date "birth_date"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

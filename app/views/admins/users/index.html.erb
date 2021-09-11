@@ -6,5 +6,7 @@
     <li>
       <%= user.email %>
     </li>
+    <%= link_to t('.delete'), user, method: :delete,
+                                  data: { confirm: t('.confirmation') } %>
   <% end %>
 </ul>
