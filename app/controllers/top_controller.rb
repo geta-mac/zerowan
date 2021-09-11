@@ -7,6 +7,14 @@ class TopController < ApplicationController
 
   def show
     @pet = Pet.find(params[:id])
+      #問合せくれている方のuser_id取得
+      reaction_user_ids  = Reaction.where(to_user_id: current_user.id, status: 'like')
+      #重複レコードを表示しない
+      .select(:from_user_id).distinct
+      #勝手にidふられてnilだから.pluckで:from_user_idを取得
+      .pluck(:from_user_id)
+      #.pluckで:from_user_idからUserを取得する
+    @inquiries_users = User.where(id: reaction_user_ids)
   end
 
   def search

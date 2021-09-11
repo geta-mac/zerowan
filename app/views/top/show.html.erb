@@ -14,16 +14,33 @@
       <div id="favorite_<%= @pet.id %>">
         <%= render 'favorites/favorite', pet: @pet %>
       </div>
-        
-      <%= form_with( url: reactions_path, local: true) do |form| %>
-        <div class=""></div>
-        <%= form.hidden_field :from_user_id, value: current_user.id %>
-        <%= form.hidden_field :to_user_id, value: @pet.user_id %>
-        <%= form.hidden_field :to_pet_id, value: @pet.id %>
-        <%= form.hidden_field :status, value: "like" %>
-        <%= form.submit "問合せ申請する", class: "submit-btn" %>
+      <%  current_user.id == @pet.user_id %> <%# 投稿者とユーザーの振り分け　%>
+        <%= form_with( url: reactions_path, local: true) do |form| %>
+          <div class=""></div>
+          <%= form.hidden_field :from_user_id, value: current_user.id %>
+          <%= form.hidden_field :to_user_id, value: @pet.user_id %>
+          <%= form.hidden_field :to_pet_id, value: @pet.id %>
+          <%= form.hidden_field :status, value: "like" %>
+          <%= form.submit "問合せ申請する", class: "submit-btn" %>
+        <% end %>
 
-      <% end %>
 
-  </ul>
+      <div>
+        <% @inquiries_users.each do |u| %>
+        <ul>
+         <span> <%= u.name %> </span> さんから問合せがきています。
+
+          <%= form_with( url: reactions_path, local: true) do |form| %>
+            <div class=""></div>
+            <%= form.hidden_field :from_user_id, value: current_user.id %>
+            <%= form.hidden_field :to_user_id, value: u.id %>
+            <%= form.hidden_field :to_pet_id, value: @pet.id %>
+            <%= form.hidden_field :status, value: "like" %>
+            <%= form.submit "問合せ申請する", class: "submit-btn" %>
+          <% end %>
+
+
+        </ul>
+        <% end %>
+      </div>
 </div>
