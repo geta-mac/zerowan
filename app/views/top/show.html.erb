@@ -1,0 +1,13 @@
+<% @pets.each do |pet| %>
+    <%= pet.name %>
+    <%= pet.age %>
+    <%= pet.castration %>
+    <%= pet.category %>
+    <%= pet.animal_type %>
+    <%= pet.character %>
+    <%= pet.gender %>
+    <%= image_tag pet.image1.url %>
+    <%= pet.description %>
+    <%= link_to "詳細", top_path(pet) %>
+    <br>
+  <% end %>

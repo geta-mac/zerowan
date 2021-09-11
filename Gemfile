@@ -24,8 +24,11 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
+gem 'carrierwave', '~> 2.0'
+gem "mini_magick"
 # gem 'bulma-rails', '~> 0.4.2'
 gem 'jquery-rails'
+gem 'active_hash'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
