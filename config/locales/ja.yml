@@ -4,3 +4,7 @@ ja:
       - :year
       - :month
       - :day
+  admins:
+    users:
+      index:
+        confimation: "削除してよろしいですか？"

@@ -7,6 +7,6 @@
       <%= user.email %>
     </li>
     <%= link_to t('.delete'), user, method: :delete,
-                                  data: { confirm: t('.confirmation') } %>
+                                  data: { confirm: "【確認】アカウントを削除してもよろしいですか？" } %>
   <% end %>
 </ul>
