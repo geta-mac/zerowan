@@ -22,15 +22,24 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'devise'
+
 gem 'devise-i18n'
+
 gem 'devise-i18n-views'
+
 gem 'carrierwave', '~> 2.0'
+
 gem "mini_magick"
+
 # gem 'bulma-rails', '~> 0.4.2'
+
 gem 'jquery-rails'
+
 gem 'active_hash'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
+
+gem 'ransack'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false

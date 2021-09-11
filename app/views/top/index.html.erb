@@ -1,4 +1,50 @@
 <p>このページはトップページです。</p>
+<div class="container">
+
+  <p>絞り込み検索</p>
+  <%= search_form_for @q, url: search_top_index_path do |f| %>
+  <div class="row">
+    <div class="col-sm-2">
+      <%= f.select :category,
+        Pet.categories.keys.map {|k| [k, k]},
+        {prompt:"種類▼"},
+        {class: 'form-control', required: true }
+      %>
+    </div>
+    <div class="col-sm-2">
+      <%= f.select :animal_type,
+        Pet.animal_types.keys.map {|k| [k, k]},
+        {prompt:"種別▼"},
+        {class: 'form-control', required: true }
+      %>
+    </div>
+    <div class="col-sm-2">
+      <%= f.select :gender,
+        Pet.genders.keys.map {|k| [k, k]},
+        {prompt:"性別▼"},
+        {class: 'form-control', required: true }
+      %>
+    </div>
+    <div class="col-sm-2">
+      <%= f.select :avairable_area,
+        Pet.avairable_areas.keys.map {|k| [k, k]},
+        {prompt:"地域▼"},
+        {class: 'form-control', required: true }
+      %>
+    </div>
+    <div class="col-sm-2">
+      <%= f.select :age,
+        Pet.ages.keys.map {|k| [k, k]},
+        {prompt:"年齢▼"},
+        {class: 'form-control', required: true }
+      %>
+    </div>
+    <div class="col-sm-2">
+      <%= f.submit '検索' %>
+    </div>
+    <% end %>
+  </div>
+</div>
 
 <% @pets.each do |pet| %>
   <ul>
@@ -8,6 +54,7 @@
         性別：<%= pet.gender %></li>
     <li>去勢：<%= pet.castration %></li>
     <li>性格：<%= pet.character %></li>
+    <li>地域：<%= pet.avairable_area %></li>
     <li>写真2：<%= image_tag pet.image2.url %></li>
     <li>写真3：<%= image_tag pet.image3.url %></li>
     <li>写真4：<%= image_tag pet.image4.url %></li>
