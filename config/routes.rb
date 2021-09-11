@@ -27,7 +27,12 @@ Rails.application.routes.draw do
     resource :favorites, only: [:create, :destroy]
   end
 
-  resources :top, only: [:index, :show]
+  resources :top, only: [:index, :show] do
+    collection do
+      get 'search', as: 'search'
+    end
+  end
+
   resources :reactions, only: [:create]
   resources :matching, only: [:index]
   resources :chat_rooms, only: [:create, :show]
