@@ -12,6 +12,9 @@
     <li>写真3：<%= image_tag pet.image3.url %></li>
     <li>写真4：<%= image_tag pet.image4.url %></li>
     <li>詳細：<%= pet.description %></li>
+    <% if user_signed_in? %>
+    <li><%= link_to "詳細", top_path(pet) %></li>
+    <% end %>
   </ul>
   <br>
 <% end %>

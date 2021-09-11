@@ -1,13 +1,18 @@
-<% @pets.each do |pet| %>
-    <%= pet.name %>
-    <%= pet.age %>
-    <%= pet.castration %>
-    <%= pet.category %>
-    <%= pet.animal_type %>
-    <%= pet.character %>
-    <%= pet.gender %>
-    <%= image_tag pet.image1.url %>
-    <%= pet.description %>
-    <%= link_to "詳細", top_path(pet) %>
-    <br>
-  <% end %>
+<div>
+  <ul>
+    <li><%= @pet.name %></li>
+    <li><%= @pet.age %></li>
+    <li><%= @pet.castration %></li>
+    <li><%= @pet.category %></li>
+    <li><%= @pet.animal_type %></li>
+    <li><%= @pet.character %></li>
+    <li><%= @pet.gender %></li>
+    <li><%= image_tag @pet.image1.url %></li>
+    <li><%= @pet.description %></li>
+    <li><%= link_to "戻る", top_index_path %></li>
+    <li>
+      <div id="favorite_<%= @pet.id %>">
+        <%= render 'favorites/favorite', pet: @pet %>
+      </div>
+  </ul>
+</div>
