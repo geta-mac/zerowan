@@ -4,7 +4,6 @@ class TopController < ApplicationController
     end
 
     def show
-        @pets = Pet.all
         @pet = Pet.find(params[:id])
     end
 
