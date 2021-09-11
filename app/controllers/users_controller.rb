@@ -4,6 +4,13 @@ class UsersController < ApplicationController
   def mypage
   end
 
+  def show
+    @pets = @user.pets
+
+    favorites = Favorite.where(user_id: current_user.id).pluck(:pet_id)
+    @favorite_list = Pet.find(favorites)
+  end
+
   def edit
   end
 

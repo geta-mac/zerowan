@@ -1,0 +1,7 @@
+ここ
+<% if @favorite_list.present? %>
+  <% @favorite_list.each do |pet| %>
+    <%= pet.title %>
+    <%= pet.content %>
+  <% end %>
+<% end %>

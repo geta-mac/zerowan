@@ -5,10 +5,10 @@ class Pet < ApplicationRecord
   mount_uploader :image4, ImageUploader
 
 
-  belongs_to :user
+  belongs_to :user, optional: true
   has_many :pet_photos
   has_many :pet_videos
-  has_many :favoritess
+  has_many :favorites, dependent: :destroy
   has_many :dm_rooms
 
   # index,showの表示を数字ではなくオス、メスなどで表示
