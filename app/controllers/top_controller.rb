@@ -26,6 +26,8 @@ class TopController < ApplicationController
       .where(gender:params[:q][:gender])
       .where(avairable_area:params[:q][:avairable_area])
       .where(age:params[:q][:age])
+    @pets = @pets.page(params[:page])
+
 
     respond_to do |format|
       format.html { render :index }
