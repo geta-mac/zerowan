@@ -10,6 +10,7 @@ class Pet < ApplicationRecord
   has_many :pet_videos
   has_many :favorites, dependent: :destroy
   has_many :dm_rooms
+  has_many :reactions
 
   # index,showの表示を数字ではなくオス、メスなどで表示
   enum gender: { オス:1,メス:2,その他:3,不明:4}
