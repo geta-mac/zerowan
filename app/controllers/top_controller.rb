@@ -2,7 +2,7 @@ class TopController < ApplicationController
   before_action :set_q, only: [:index, :search]
 
   def index
-    @pets = Pet.all
+    @pets = Pet.all.page(params[:page]).per(6)
   end
 
   def show

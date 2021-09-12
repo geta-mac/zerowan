@@ -30,7 +30,7 @@ gem 'devise-i18n-views'
 gem 'carrierwave', '~> 2.0'
 
 gem "mini_magick"
-
+gem 'kaminari'
 # gem 'bulma-rails', '~> 0.4.2'
 
 gem 'jquery-rails'
