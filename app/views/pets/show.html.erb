@@ -1,17 +1,16 @@
 <div>
   <ul>
-    <li><%= @pet.name %></li>
-    <li><%= @pet.age %></li>
-    <li><%= @pet.castration %></li>
-    <li><%= @pet.category %></li>
-    <li><%= @pet.animal_type %></li>
-    <li><%= @pet.character %></li>
-    <li><%= @pet.gender %></li>
     <li><%= image_tag @pet.image1.url %></li>
     <li><%= image_tag @pet.image2.url %></li>
     <li><%= image_tag @pet.image3.url %></li>
     <li><%= image_tag @pet.image4.url %></li>
-    <li><%= @pet.description %></li>
+    <li>名前：<%= @pet.name %></li>
+    <li>年齢：<%= @pet.age %></li>
+    <li>去勢有無：<%= @pet.castration %></li>
+    <li>種類：<%= @pet.category %></li>
+    <li>性格：<%= @pet.character %></li>
+    <li>性別：<%= @pet.gender %></li>
+    <li>コメント：<%= @pet.description %></li>
   </ul>
     <%= link_to "編集", edit_pet_path(@pet) %>
     <%= link_to "戻る", pets_path %>
