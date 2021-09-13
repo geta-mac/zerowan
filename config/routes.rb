@@ -4,11 +4,12 @@ Rails.application.routes.draw do
     get 'users/show'
     get 'users/edit'
     get 'base/show'
-  end
+  
     get 'posts/index'	
     get 'posts/show'	
     get 'posts/edit'
-
+  end
+  
   devise_for :admins, controllers: {
     sessions: 'admins/sessions',
     passwords: 'admins/passwords',
