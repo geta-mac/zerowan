@@ -19,7 +19,41 @@
 	border-radius:50%;
 }
 
-.topimage{
-    width:100%;
+// .topimage{
+//     width:100%;
+//     position: relative;
+// }
+
+//topタイトル画像の部分
+.zerowantop {
     position: relative;
+ 
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color:rgb(234, 224, 224);
+    font-size:4em; /* 追加 */
+    font-weight: 600; /* 追加 */
+  }
+  P {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color:rgb(234, 224, 224);  
+    font-size:8em;
+    font-weight: 800;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    top: 50%; /* 追記 */
+    left: 50%; /* 追記 */
+    -ms-transform: translate(-50%, -50%); /* 追記 */
+    -webkit-transform: translate(-50%, -50%); /* 追記 */
+    transform: translate(-50%, -50%); /* 追記 */
+  }
+  img {
+    width:100%;  border: dashed 1px silver;
+    height: 700px;
+    object-fit: none;
+    opacity: 0.7;
+  }
 }
