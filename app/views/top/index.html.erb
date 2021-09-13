@@ -1,6 +1,6 @@
 <p>このページはトップページです。</p>
 <div class="container">
-
+<%= image_tag 'zerowan_top01' , class: "topimage"%>
   <p>絞り込み検索</p>
   <%= search_form_for @q, url: search_top_index_path do |f| %>
   <div class="row">
@@ -45,25 +45,28 @@
     <% end %>
   </div>
 </div>
-
+<div class="row">
   <% @pets.each do |pet| %>
+    <div class="col-sm ">
+    <div class="post-profile">
     <ul>
-      <li>写真1：<%= image_tag pet.image1.url %></li>
+      <li><%= image_tag pet.image1.url , class: "circle" %></li>
+      <div class="pet-profile">
       <li>種別：<%= pet.animal_type %></li>
       <li>名前：<%= pet.name %>
           性別：<%= pet.gender %></li>
       <li>去勢：<%= pet.castration %></li>
       <li>性格：<%= pet.character %></li>
       <li>地域：<%= pet.avairable_area %></li>
-      <li>写真2：<%= image_tag pet.image2.url %></li>
-      <li>写真3：<%= image_tag pet.image3.url %></li>
-      <li>写真4：<%= image_tag pet.image4.url %></li>
       <li>詳細：<%= pet.description %></li>
       <% if user_signed_in? %>
       <li><%= link_to "詳細", top_path(pet) %></li>
+      </div>
       <% end %>
     </ul>
     <br>
+    </div>
+    </div>
   <% end %>
-
+  </div>
   <%= paginate @pets %>

@@ -1,0 +1,25 @@
+.post-profile{
+    margin:10px 10px;
+    border: 5px solid rgb(184, 197, 243) ;
+    background-color:white;
+}
+.pet-profile{
+    background-color:rgb(236, 231, 231);
+}
+// img{
+//     width:250px;
+// 	height:250px;
+// 	object-fit:cover;
+// 	border-radius:50%;
+// }
+.circle{
+    width:250px;
+	height:250px;
+	object-fit:cover;
+	border-radius:50%;
+}
+
+.topimage{
+    width:100%;
+    position: relative;
+}
