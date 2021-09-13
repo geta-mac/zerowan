@@ -2,7 +2,7 @@ class TopController < ApplicationController
   before_action :set_q, only: [:index, :search]
 
   def index
-    @pets = Pet.all.page(params[:page]).per(6)
+    @pets = Pet.all.page(params[:page]).per(9)
   end
 
   def show
@@ -26,7 +26,7 @@ class TopController < ApplicationController
       .where(gender:params[:q][:gender])
       .where(avairable_area:params[:q][:avairable_area])
       .where(age:params[:q][:age])
-      .page(params[:page]).per(6)
+      .page(params[:page]).per(9)
 
     respond_to do |format|
       format.html { render :index }

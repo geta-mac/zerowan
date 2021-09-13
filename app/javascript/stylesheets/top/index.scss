@@ -1,10 +1,20 @@
 .post-profile{
-    margin-top:10px;
-    border: 5px solid purple ;
+    margin:10px 10px;
+    border: 5px solid rgb(184, 197, 243) ;
     background-color:white;
-    
 }
-
-img{
-    border-radius: 50%;
+.pet-profile{
+    background-color:rgb(236, 231, 231);
+}
+// img{
+//     width:250px;
+// 	height:250px;
+// 	object-fit:cover;
+// 	border-radius:50%;
+// }
+.circle{
+    width:250px;
+	height:250px;
+	object-fit:cover;
+	border-radius:50%;
 }

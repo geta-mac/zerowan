@@ -50,7 +50,8 @@
     <div class="col-sm ">
     <div class="post-profile">
     <ul>
-      <li>写真1：<%= image_tag pet.image1.url %></li>
+      <li><%= image_tag pet.image1.url , class: "circle" %></li>
+      <div class="pet-profile">
       <li>種別：<%= pet.animal_type %></li>
       <li>名前：<%= pet.name %>
           性別：<%= pet.gender %></li>
@@ -60,6 +61,7 @@
       <li>詳細：<%= pet.description %></li>
       <% if user_signed_in? %>
       <li><%= link_to "詳細", top_path(pet) %></li>
+      </div>
       <% end %>
     </ul>
     <br>
