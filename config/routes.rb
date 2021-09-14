@@ -9,9 +9,9 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
     sessions: 'users/sessions',
     passwords: 'users/passwords',
-  ギt  registrations: 'users/registrations'
+    registrations: 'users/registrations'
   }
-
+  
   root 'top#index'
 
   resources :users, only: [:show, :edit, :update, :destroy] do
