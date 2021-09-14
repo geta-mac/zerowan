@@ -16,3 +16,9 @@ ActiveStorage.start()
 
 import 'bootstrap';
 import '../stylesheets/application';
+
+$(function() {
+  $('.pet_image').slick({
+      dots: true,
+  });
+});
