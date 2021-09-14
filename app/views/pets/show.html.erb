@@ -1,9 +1,14 @@
 <div>
+  <div class="pet_image_background">
+    <div class="pet_image">
+      <%= image_tag @pet.image1.url %>
+      <%= image_tag @pet.image2.url %>
+      <%= image_tag @pet.image3.url %>
+      <%= image_tag @pet.image4.url %>
+    </div>
+  </div>
+  <div class="pet_content_background">
   <ul>
-    <li><%= image_tag @pet.image1.url %></li>
-    <li><%= image_tag @pet.image2.url %></li>
-    <li><%= image_tag @pet.image3.url %></li>
-    <li><%= image_tag @pet.image4.url %></li>
     <li>名前：<%= @pet.name %></li>
     <li>年齢：<%= @pet.age %></li>
     <li>去勢有無：<%= @pet.castration %></li>
@@ -16,4 +21,5 @@
     <%= link_to "戻る", pets_path %>
   <br>
     <%= link_to "削除", pet_path(@pet), method: :delete, data: { confirm: '本当に削除してもいいですか?' }  %>
+  </div>
 </div>
