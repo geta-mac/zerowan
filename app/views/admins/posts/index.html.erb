@@ -1,11 +1,23 @@
 <h2>投稿一覧</h2>
 
-<p>ここは、ユーザー一覧からの遷移で、</p>
-<p>ユーザー一覧から選択したユーザーの投稿一覧を表示する</p>
 
 
+これは試しに表示させている
 <%= @pet_user_postcount %>
 
+
+    <table>
+    <tr>
+    <th>投稿者名</th><th>投稿数</th>
+    </tr>
+    <% @pet_post_user.each do |user| %>
+    <tr>
+        <td> <%= user.name %>さん </td>
+        <td> <%= Pet.where(user_id:user.id).count %></td>
+    </tr>
+    <% end %>
+    </table>
+ 
 
 
 <li><%= link_to "管理者メニュー", admins_base_show_path(current_admin) %></li>
