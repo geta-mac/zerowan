@@ -5,19 +5,13 @@
 これは試しに表示させている
 <%= @pet_user_postcount %>
 
-
-    <table>
-    <tr>
-    <th>投稿者名</th><th>投稿数</th>
-    </tr>
+<div class="admin-menu">
     <% @pet_post_user.each do |user| %>
-    <tr>
-        <td> <%= user.name %>さん </td>
-        <td> <%= Pet.where(user_id:user.id).count %></td>
-    </tr>
+        <div class="admin-menu-content">
+            <%= user.name %>さん  投稿数：
+        <%= Pet.where(user_id:user.id).count %>
+    </div>
     <% end %>
-    </table>
+</div>
  
-
-
 <li><%= link_to "管理者メニュー", admins_base_show_path(current_admin) %></li>
