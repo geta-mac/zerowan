@@ -10,7 +10,7 @@
         <div class="admin-menu-content">
             <%= user.name %>さん  投稿数：
         <%= Pet.where(user_id:user.id).count %>
-        <%=link_to "詳細" , admins_posts_show_path(current_admin) %>
+        <%=link_to "詳細" , admins_posts_show_path(user_id:user.id) %>
     </div>
     <% end %>
 </div>
