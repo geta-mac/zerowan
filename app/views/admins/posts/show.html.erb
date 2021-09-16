@@ -1,7 +1,7 @@
 <P>ここはSHOWだぞ！</P>
 
-
-<% @post_pets.each do |pet| %>
+<div class="row">
+  <% @post_pets.each do |pet| %>
     <div class="col-sm ">
     <div class="post-profile">
     <ul>
@@ -23,4 +23,8 @@
     </div>
     </div>
   <% end %>
-  </div>
+</div>
+ 
+<div class="flex-column">
+  <%= paginate @post_pets %>
+</div>

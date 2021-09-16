@@ -10,6 +10,7 @@ class Admins::PostsController < ApplicationController
 
   def show
     @post_pets = Pet.where(user_id: params[:user_id])
+    .page(params[:page]).per(9)
   
   end
 
