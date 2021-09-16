@@ -1,0 +1,26 @@
+<P>ここはSHOWだぞ！</P>
+
+
+<% @post_pets.each do |pet| %>
+    <div class="col-sm ">
+    <div class="post-profile">
+    <ul>
+      <li><%= image_tag pet.image1.url , class: "circle" %></li>
+      <div class="pet-profile">
+      <li>種別：<%= pet.animal_type %></li>
+      <li>名前：<%= pet.name %>
+          性別：<%= pet.gender %></li>
+      <li>去勢：<%= pet.castration %></li>
+      <li>性格：<%= pet.character %></li>
+      <li>地域：<%= pet.avairable_area %></li>
+      <li>詳細：<%= pet.description %></li>
+      <% if admin_signed_in? %>
+      <li><%= link_to "詳細", "#" %></li>
+      </div>
+      <% end %>
+    </ul>
+    <br>
+    </div>
+    </div>
+  <% end %>
+  </div>
