@@ -1,7 +1,7 @@
 @import '~bootstrap/scss/bootstrap';
 
 @import "app";
-@import "matching";
+@import "matching/index";
 @import "chat_rooms";
 @import "pets";
 @import "top";
@@ -9,4 +9,4 @@
 @import "chat_rooms/show";
 
 @import "top/index";
-@import "base/show";
+@import "admins/base/show";

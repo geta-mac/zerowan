@@ -1,25 +1,27 @@
 <div class="matching-index-page">
+  <div class="matching-index-page">
 
-  <div class="matching">
-    <p class="matching-title ml-3">メッセージ</p>
-    <p class="matching-num">お問い合わせ <%= @match_users.size %>人</p>
+    <div class="matching">
+      <p class="matching-title ml-3">メッセージ</p>
+      <p class="matching-num">お問い合わせ <%= @match_users.size %>人</p>
 
-    <div class="matching__list">
-      <% unless @match_users.empty? %>
-        <% @match_users.each do |user| %>
+      <div class="matching__list">
+        <% unless @match_users.empty? %>
+          <% @match_users.each do |user| %>
 
-          <%= link_to chat_rooms_path(params: { user_id: user.id }), method: :post do %>
-            <div class="matching__person">
+            <%= link_to chat_rooms_path(params: { user_id: user.id }), method: :post do %>
+              <div class="matching__person">
 
-              <div class="matching__person-name">
-                <%= user.name %>
+                <div class="matching__person-name">
+                  <%= user.name %>さん メッセージを開く
+                </div>
+
               </div>
-
-            </div>
+            <% end %>
           <% end %>
         <% end %>
-      <% end %>
+      </div>
     </div>
-  </div>
 
+  </div>
 </div>

@@ -33,7 +33,7 @@
   }
   
   .chat-room-message{
-    background-color: #cacaca;
+    background-color: #dddbdb;
   }
 
   .chat-message {
@@ -58,15 +58,3 @@
   }
   
 
-  
-  textarea:focus {
-    outline: none;
-  }
-  
-  @media (min-width: 414px) {
-    .chat-room-show-page {
-      border: 1px solid rgba(0, 0, 0, 0.125);
-      border-radius: 0.25rem;
-      margin: 8px auto;
-    }
-  }

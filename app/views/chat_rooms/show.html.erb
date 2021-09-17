@@ -1,16 +1,13 @@
-<p>チャットルームページ</p>
-
 <div>
-<h4>問い合わせ相手：<%= @chat_room_user.name %>さん</h3>
+  <h4><%= @chat_room_user.name %>さんとのメッセージ</h3>
 </div>
-<div class="chat-room-message">
-<div id='chat-messages'>
-  <%= render @chat_messages %><br>
-</div>
-
-<form>
-  <textarea data-behavior="chat_room_speaker" data-chat_room_id="<%= @chat_room.id %>" 
-  placeholder="メッセージを入力" class="chat-room__message-form_textarea"></textarea>
-</form>
-
+  <div class="chat-room-message">
+    <div id='chat-messages'>
+      <%= render @chat_messages %><br>
+    </div>
+  </div>
+  <form>
+    <textarea data-behavior="chat_room_speaker" data-chat_room_id="<%= @chat_room.id %>" 
+    placeholder="メッセージを入力" class="chat-room__message-form_textarea"></textarea>
+  </form>
 </div>
