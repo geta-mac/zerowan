@@ -23,9 +23,26 @@
     <li>性別：<%= @pet.gender %></li>
     <li>コメント：<%= @pet.description %></li>
   </ul>
-    <%= link_to "編集", edit_pet_path(@pet) %>
-    <%= link_to "戻る", pets_path %>
+
   <br>
-    <%= link_to "削除", pet_path(@pet), method: :delete, data: { confirm: '本当に削除してもいいですか?' }  %>
+  <br>
+
+  <button type="button" class="btn btn-secondary btn-position" >
+    <%= link_to "編集", edit_pet_path(@pet), class: "button-design" %>
+  </button>
+
+  <br>
+
+  <button type="button" class="btn btn-outline-dark btn-position2" >
+    <%= link_to "戻る", pets_path, class: "button-design2" %>
+  </button>
+  <button type="button" class="btn btn-danger btn-position3" >
+    <%= link_to("削除",
+                pet_path(@pet),
+                { method: :delete,
+                data: {confirm: '本当に削除してもいいですか?'},
+                class: "button-design"})
+    %>
+  </button>
   </div>
 </div>

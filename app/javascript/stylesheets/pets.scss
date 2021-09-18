@@ -8,7 +8,18 @@ hr {
 
 li {
   text-align:left;
+  font-size: 18px;
   }
+
+.button-design {
+  text-decoration: none;
+  color: rgb(252, 249, 249);
+}
+
+.button-design2 {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
 
 .pet_image_background{
   background-color: gray;
@@ -20,11 +31,37 @@ li {
 .pet_image img{
   height: 60vh;
   width: auto;
-  margin: auto
+  margin: auto;
 }
 
 .pet_content_background{
-  width: 80%;
   margin: auto;
+  width: 80%;
   background-color: white;
+  border: 1px solid;
+  position: relative;
+}
+
+.btn-position {
+  width: 30%;
+  position: absolute;
+  right: 10%;
+  bottom: 16%;
+  border-radius: 20px;
+}
+
+.btn-position2 {
+  width: 30%;
+  position: absolute;
+  left: 10%;
+  bottom: 0%;
+  border-radius: 20px;
+}
+
+.btn-position3 {
+  width: 30%;
+  position: absolute;
+  right: 10%;
+  bottom: 0%;
+  border-radius: 20px;
 }
