@@ -17,9 +17,8 @@
       <li>去勢：<%= pet.castration %></li>
       <li>性格：<%= pet.character %></li>
       <li>地域：<%= pet.avairable_area %></li>
-      <li>詳細：<%= pet.description %></li>
       <% if admin_signed_in? %>
-      <li><%= link_to "詳細", "#" %></li>
+      <li><%= link_to "詳細", pet_path(pet) %></li>
       <li><%= link_to t('.delete'), pet, method: :delete, data: {
               confirm: "【確認】投稿を削除してもよろしいですか？" 
       } %></li>
