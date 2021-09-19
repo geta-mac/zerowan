@@ -1,15 +1,14 @@
 <h2>投稿一覧</h2>
 
 
-
-これは試しに表示させている
-<%= @pet_user_postcount %>
-
 <div class="admin-menu">
     <% @pet_post_user.each do |user| %>
         <div class="admin-menu-content">
-            <%= user.name %>さん  投稿数：
-        <%= Pet.where(user_id:user.id).count %>
+           <%= user.name %>さん  
+           最終ログイン:
+            <%= user.current_sign_in_at %>
+           投稿数：
+            <%= Pet.where(user_id:user.id).count %>
         <%=link_to "詳細" , admins_posts_show_path(user_id:user.id) %>
     </div>
     <% end %>
