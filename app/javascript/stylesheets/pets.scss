@@ -25,6 +25,7 @@ li {
   background-color: gray;
   width: 80%;
   height: 40vh;
+  margin: auto;
 }
 
 .pet_image img{
@@ -63,4 +64,8 @@ li {
   right: 10%;
   bottom: 0%;
   border-radius: 20px;
+}
+
+.slick-prev:before, .slick-next:before {
+  color: #000;
 }
