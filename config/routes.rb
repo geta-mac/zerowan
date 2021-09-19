@@ -21,7 +21,7 @@ Rails.application.routes.draw do
     passwords: 'users/passwords',
     registrations: 'users/registrations'
   }
-
+  
   root 'top#index'
 
   resources :users, only: [:show, :edit, :update, :destroy] do
