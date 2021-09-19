@@ -1,0 +1,13 @@
+.admin-menu {
+    display:flex;
+    flex-flow: column;
+    border:2px #ccc solid;
+    height:300px;
+    margin:0 0 1em;
+  }
+  .admin-menu-content {
+    padding:1em;
+    background-color:#bdbdbd;
+    margin:0.5em auto;
+    width:50%;
+  }

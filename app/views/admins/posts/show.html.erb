@@ -1,0 +1,32 @@
+<P>ここはSHOWだぞ！</P>
+
+
+<% @post_pets.each do |pet| %>
+    <div class="col-sm ">
+    <div class="post-profile">
+    <ul>
+      <li><%= image_tag pet.image1.url , class: "circle" %>
+          <%= image_tag pet.image2.url , class: "circle" %>
+          <%= image_tag pet.image3.url , class: "circle" %>
+          <%= image_tag pet.image4.url , class: "circle" %>
+          </li>
+      <div class="pet-profile">
+      <li>種別：<%= pet.animal_type %></li>
+      <li>名前：<%= pet.name %>
+          性別：<%= pet.gender %></li>
+      <li>去勢：<%= pet.castration %></li>
+      <li>性格：<%= pet.character %></li>
+      <li>地域：<%= pet.avairable_area %></li>
+      <% if admin_signed_in? %>
+      <li><%= link_to "詳細", pet_path(pet) %></li>
+      <li><%= link_to t('.delete'), pet, method: :delete, data: {
+              confirm: "【確認】投稿を削除してもよろしいですか？" 
+      } %></li>
+      </div>
+      <% end %>
+    </ul>
+    <br>
+    </div>
+    </div>
+  <% end %>
+  </div>
