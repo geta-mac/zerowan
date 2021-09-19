@@ -6,6 +6,8 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    </script>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag 'application',
@@ -13,6 +15,10 @@
       'data-turbolinks-track':
       'reload'
       %>
+      <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+      <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+      <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js">
+      </script>
   </head>
 
   <body>
@@ -40,6 +46,8 @@
     <% elsif admin_signed_in? %>
       <li>管理者</li>
       <li><%= link_to "ログアウト", destroy_admin_session_path, method: :delete %></li>
+      <li><%= link_to "管理者メニュー", admins_base_show_path %></li>
+
     <% else %>
       <li>ゲストユーザー</li>
       <li><%= link_to "新規登録", new_user_registration_path %></li>

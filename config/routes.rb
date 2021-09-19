@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
-
+  namespace :admins do
+    get 'users/index'
+    get 'users/show'
+    get 'users/edit'
+    get 'base/show'
+  
+    get 'posts/index'	
+    get 'posts/show'	
+    get 'posts/edit'
+  end
+  
   devise_for :admins, controllers: {
     sessions: 'admins/sessions',
     passwords: 'admins/passwords',
@@ -11,7 +21,7 @@ Rails.application.routes.draw do
     passwords: 'users/passwords',
     registrations: 'users/registrations'
   }
-
+  
   root 'top#index'
 
   resources :users, only: [:show, :edit, :update, :destroy] do
@@ -21,6 +31,12 @@ Rails.application.routes.draw do
       get "mypage/edit", :to => "users#edit"
       put "mypage", :to => "users#update"
     end
+
+    namespace :admins do	
+      resources :posts	
+      resources :users	
+      resources :base
+      end
   end
 
   resources :pets do

@@ -5,3 +5,31 @@
 hr {
   margin: 5px, 0px, 0px;
 }
+
+li {
+  text-align:left;
+  }
+
+.pet_image_background{
+  background-color: gray;
+  width: 100%;
+  height: auto;
+  margin: auto;
+}
+
+.pet_image {
+  width: 50vw;
+  height: auto;
+  margin: auto;
+}
+
+.pet_image img{
+  width: 50%;
+  height: auto;
+}
+
+.pet_content_background{
+  width: 80%;
+  margin: auto;
+  background-color: white;
+}

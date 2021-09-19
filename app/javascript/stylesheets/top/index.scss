@@ -3,9 +3,7 @@
     border: 5px solid rgb(184, 197, 243) ;
     background-color:white;
 }
-.pet-profile{
-    background-color:rgb(236, 231, 231);
-}
+
 // img{
 //     width:250px;
 // 	height:250px;
@@ -61,6 +59,10 @@
   }
 }
 
+.pet-profile{
+  background:rgb(184, 187, 223);
+  position:relative;
+}
 .search-pets{
   margin-top: 10px;
   background:rgb(142, 207, 233);
