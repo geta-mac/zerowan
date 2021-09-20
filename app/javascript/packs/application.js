@@ -18,7 +18,7 @@ import 'bootstrap';
 import '../stylesheets/application';
 
 $(function() {
-  $('.pet_image').slick({
+  $('.pet_image_background').slick({
       dots: true,
   });
 });

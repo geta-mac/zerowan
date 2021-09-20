@@ -1,15 +1,16 @@
 <h2>管理者メニュー</h2>
-<table border="1" width="50%">
-    <tr>
-      <td><%= link_to 'ユーザー一覧、削除', admins_users_index_path %></td>
-    </tr>
-    <tr>
-      <td><%= link_to '投稿一覧、削除',   admins_posts_index_path %></td>
-    </tr>
-    <tr>
-      <td><%= link_to '検索', admins_users_index_path %></td>
-    </tr>
-    <tr>
-      <td><%= link_to 'ログアウト', destroy_admin_session_path, method: :delete %></td>
-    </tr>
-  </table>
+
+  <div class="admin-menu">
+    <div class="admin-menu-content">
+      <%= link_to 'ユーザー一覧、削除', admins_users_index_path %>
+    </div>
+    <div class="admin-menu-content">
+      <%= link_to '投稿一覧、削除',   admins_posts_index_path %>
+    </div>
+    <div class="admin-menu-content">
+      <%= link_to '検索', admins_users_index_path %>
+    </div>  
+    <div class="admin-menu-content">
+      <%= link_to 'ログアウト', destroy_admin_session_path, method: :delete %>
+    </div>
+  </div>
