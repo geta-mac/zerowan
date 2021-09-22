@@ -6,8 +6,8 @@ class ApplicationController < ActionController::Base
     "/user/#{current_user.id}"
   end
 
-  def after_sign_in_path_for(amin)
-    "/amin/#{current_user.id}"
+  def after_sign_in_path_for(admin)
+    "/admin/#{current_user.id}"
   end
 
   protected

@@ -42,7 +42,26 @@ h3, .h3 {
 
 .side {
   background-color:#ff838b;
-  text-align:center;
+}
+.sticky-sidebar {
+  top: 60px;
+  position: sticky;
+}
+
+.sidebar-design {
+  flex-direction: column;
+}
+
+.sidebar-button {
+  width: 100%;
+  margin-top: 30px;
+  background-color:#C4C4C4;
+  border: 1px solid ;
+}
+
+.sidebar-button-link {
+  text-decoration: none;
+  color: black;
 }
 
 .content {
