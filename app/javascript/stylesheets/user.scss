@@ -91,12 +91,25 @@
   color: black;
 }
 
-.mypage-card {
-  height: 70px;
+
+.list-group-item{
+  display: flex;
+  justify-content: center;/*左右中央揃え*/
+  align-items: center;     /*上下中央揃え*/
+  text-decoration:none;
+  height: 80px;
+  font-size: 25px;
 }
 
-.mypage-link {
-  text-decoration: none;
-  text-align: left;
-  padding: auto 50 0;
+.content-card {
+  height:60px;
+  text-align:center;
+  position:relative;
+  text-decoration:none;
 }
+
+.mypage-frame {
+  width: 80%;
+  margin: auto;
+}
+
