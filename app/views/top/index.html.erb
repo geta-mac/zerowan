@@ -62,7 +62,6 @@
     <div class="pet-description">去勢：<%= pet.castration %></div>
     <div class="pet-description">性格：<%= pet.character %></div>
     <div class="pet-description">地域：<%= pet.avairable_area %></div>
-    <div class="pet-description">詳細：<%= pet.description %></div>
     <% if user_signed_in? %>
       <div><%= link_to "詳細", top_path(pet) %></div>
       <% end %>

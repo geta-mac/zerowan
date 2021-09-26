@@ -6,7 +6,7 @@
 
 100.times do |p|
    Pet.create!(
-      name: "ダークリ●ッ●マ#{p + 1}号",
+      name: "ポチ#{p + 1}",
       age: rand(1..3),
       castration: rand(1..3),
       category: rand(1..3),
@@ -15,7 +15,7 @@
       avairable_area: rand(1..47),
       animal_type: rand(1..12),
       description: "テストNo.#{p + 1}",
-      image1: open('./app/assets/images/DR.jpg'),
+      image1: open('./app/assets/images/papillon-puppy-wallpaper-preview.jpg'),
       user_id: 1
    )
 end

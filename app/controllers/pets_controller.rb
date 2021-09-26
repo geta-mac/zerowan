@@ -26,7 +26,6 @@ class PetsController < ApplicationController
   def update
     @pet = Pet.find(params[:id])
     @pet.update(pet_params)
-    .page(params[:page])
     redirect_to pet_url @pet
   end
 

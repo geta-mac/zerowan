@@ -7,12 +7,12 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(admin)
-    "/admin/#{current_user.id}"
+    "/admin/"
   end
 
   protected
 
-  # 入力フォームからアカウント名情報をDBに保存するために追加
+
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
   end
