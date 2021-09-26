@@ -1,0 +1,103 @@
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+
+html,
+body {
+  margin: 0;
+  font-family: Nunito, sans-serif;
+  font-size: .9rem;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #212529;
+  text-align: left;
+  background-color: #f8fafc;
+}
+a {
+  text-decoration:none;
+}
+
+h3, .h3 {
+  font-size: 1.575rem;
+}
+
+.navbar-brand {
+  display: inline-block;
+  padding-top: .32rem;
+  padding-bottom: .32rem;
+  margin-right: 1rem;
+  font-size: 1.125rem;
+  line-height: inherit;
+  white-space: nowrap
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: calc(2.19rem + 2px);
+  padding: .375rem .75rem;
+  font-size: .9rem;
+  line-height: 1.6;
+  color: #495057;
+  background:rgb(142, 207, 233);
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+}
+
+.side {
+  background-color:#ff838b;
+}
+.sticky-sidebar {
+  top: 60px;
+  position: sticky;
+}
+
+.sidebar-design {
+  flex-direction: column;
+}
+
+.sidebar-button {
+  width: 100%;
+  margin-top: 30px;
+  background-color:#C4C4C4;
+  border: 1px solid ;
+}
+
+.sidebar-button-link {
+  text-decoration: none;
+  color: black;
+}
+
+.content {
+  text-align:center;
+  width: 75%;
+}
+
+body {
+  display:flex;
+}
+
+li {
+  list-style-type: none;
+}
+
+.navbar{
+  background: rgb(247, 158, 158);
+}
+
+/*ページネーション自体のデザイン*/
+.pagination>li>a {
+  border: none;     /*枠線をなくす*/
+  color: #696969;   /*文字の色を変える*/
+}
+
+/* 表示しているページ番号のデザイン */
+.pagination>.active>a {
+  background: #93c9ff;     /*背景の色を変える*/
+  border-radius: 15px;     /*角を丸くする*/
+}
+
+/*ホバー時のデザイン*/
+.pagination>li>a:hover {
+  border-radius: 15px;    /*角を丸くする*/
+}

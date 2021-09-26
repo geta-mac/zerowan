@@ -5,6 +5,8 @@ services:
     volumes:
       - ./tmp/db:/var/lib/postgresql/data
     environment:
+      environment:
+      TZ: Asia/Tokyo
       username: postgres
       POSTGRES_PASSWORD: password
   web:
@@ -16,3 +18,5 @@ services:
       - "3000:3000"
     depends_on:
       - db
+    tty: true
+    stdin_open: true

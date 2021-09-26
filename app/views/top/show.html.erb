@@ -1,0 +1,69 @@
+<div style="height: 100vh;">
+  <div class="image_background">
+    <div class="pet_image_background">
+        <div class="pet_image">
+          <%= image_tag @pet.image1.url %>
+        </div>
+        <div class="pet_image">
+          <%= image_tag @pet.image2.url %>
+        </div>
+        <div class="pet_image">
+          <%= image_tag @pet.image3.url %>
+        </div>
+        <div class="pet_image">
+          <%= image_tag @pet.image4.url %>
+        </div>
+    </div>
+  </div>
+  <div class="pet_content_background">
+  <ul>
+    <li>名前:<%= @pet.name %></li>
+    <li>年齢：<%= @pet.age %></li>
+    <li>去勢有無：<%= @pet.castration %></li>
+    <li>種類：<%= @pet.category %></li>
+    <li>動物の種類：<%= @pet.animal_type %></li>
+    <li>性格：<%= @pet.character %></li>
+    <li>性別：<%= @pet.gender %></li>
+    <li>コメント：<%= @pet.description %></li>
+  </ul>
+
+  <br>
+  <br>
+  <hr>
+      <div id="favorite_<%= @pet.id %>" class="favorite_design">
+        <%= render 'favorites/favorite', pet: @pet %>
+      </div>
+      <%  current_user.id == @pet.user_id %> <%# 投稿者とユーザーの振り分け　%>
+      <hr>
+        <%= form_with( url: reactions_path, local: true) do |form| %>
+          <div class=""></div>
+          <%= form.hidden_field :from_user_id, value: current_user.id %>
+          <%= form.hidden_field :to_user_id, value: @pet.user_id %>
+          <%= form.hidden_field :to_pet_id, value: @pet.id %>
+          <%= form.hidden_field :status, value: "like" %>
+          <%= form.submit "問合せ申請する", class: "submit-btn" %>
+        <hr>
+          <% end %>
+
+
+      <div>
+        <% @inquiries_users.each do |u| %>
+        <ul>
+         <span> <%= u.name %> </span> さんから問合せがきています。
+
+          <%= form_with( url: reactions_path, local: true) do |form| %>
+            <div class=""></div>
+            <%= form.hidden_field :from_user_id, value: current_user.id %>
+            <%= form.hidden_field :to_user_id, value: u.id %>
+            <%= form.hidden_field :to_pet_id, value: @pet.id %>
+            <%= form.hidden_field :status, value: "like" %>
+            <%= form.submit "問合せ申請承認", class: "submit-btn" %>
+          <% end %>
+
+
+        </ul>
+        <% end %>
+      <hr>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<div style="height: 100vh;">
+<h2>投稿一覧</h2>
+
+
+<div class="admin-menu">
+    <% @pet_post_user.each do |user| %>
+        <div class="admin-menu-content">
+           <%= user.name %>さん
+           最終ログイン:
+            <%= user.current_sign_in_at.strftime("%Y年%m月%d日") %>
+           投稿数：
+            <%= Pet.where(user_id:user.id).count %>
+        <%=link_to "詳細" , admins_posts_show_path(user_id:user.id) %>
+    </div>
+    <% end %>
+</div>
+</div>
+

@@ -1,0 +1,148 @@
+<div style="height: 100vh;">
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-5">
+      <h3 class="mt-3 mb-3">ユーザー情報編集</h3>
+
+      <hr>
+
+      <%= form_with url: mypage_users_path, local: true, method: :put do |f| %>
+        <div class="form-group row">
+          <%= f.label :name, "", class: "col-md-5 col-form-label text-md-left" do %>
+            氏名
+            <span class="ml-1 zerowan-require-input-label">
+              <span class="zerowan-require-input-label-text">必須</span>
+            </span>
+          <% end %>
+          <div class="col-md-7">
+            <%=
+              f.text_field :name,
+              class: "form-control
+              #{"is-invalid" if @user.errors.messages[:name].present? }
+              zerowan-login-input",
+              autofocus: "true",
+              required: "",
+              autocomplete: "name",
+              placeholder: "#{@user.name}"
+            %>
+            <% if @user.errors.messages[:name].present? %>
+              <span class="zerowan-error-message">
+                <strong><%= @user.errors.full_messages_for(:name).first %></strong>
+              </span>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <%= f.label :email, "", class: "col-md-5 col-form-label text-md-left" do %>
+          メールアドレス
+            <span class="ml-1 zerowan-require-input-label">
+              <span class="zerowan-require-input-label-text">必須</span>
+            </span>
+          <% end %>
+          <div class="col-md-7">
+            <%=
+              f.email_field :email,
+              class: "form-control
+              #{"is-invalid" if @user.errors.messages[:email].present? }
+              zerowan-login-input",
+              autofocus: "true",
+              required: "",
+              autocomplete: "email",
+              placeholder: "#{@user.email}"
+            %>
+            <% if @user.errors.messages[:email].present? %>
+              <span class="zerowan-error-message">
+                <strong><%= @user.errors.full_messages_for(:email).first %></strong>
+              </span>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <%= f.label :address, "", class: "col-md-5 col-form-label text-md-left" do %>
+          住所
+            <span class="ml-1 zerowan-require-input-label">
+              <span class="zerowan-require-input-label-text">必須</span>
+            </span>
+          <% end %>
+          <div class="col-md-7">
+            <%=
+              f.text_field :address,
+              class: "form-control #{
+                "is-invalid" if @user.errors.messages[:address].present?
+                } zerowan-login-input",
+              required: "",
+              placeholder: "#{@user.address}"
+            %>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <%= f.label :phone, "", class: "col-md-5 col-form-label text-md-left" do %>
+          電話番号
+            <span class="ml-1 zerowan-require-input-label">
+              <span class="zerowan-require-input-label-text">必須</span>
+            </span>
+          <% end %>
+          <div class="col-md-7">
+            <%=
+              f.text_field :phone,
+              class: "form-control
+              #{"is-invalid" if @user.errors.messages[:phone].present? }
+              zerowan-login-input",
+              required: "",
+              placeholder: "#{@user.phone}"
+            %>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <%= f.label :birth_date, "", class: "col-md-5 col-form-label text-md-left" do %>
+            生年月日
+            <span class="ml-1 zerowan-require-input-label">
+              <span class="zerowan-require-input-label-text">必須</span>
+            </span>
+          <% end %>
+            <div class="col-md-7">
+              <%=
+                raw sprintf(
+                f.date_select(
+                :birth_date,
+                use_month_numbers: true,
+                start_year: 1900,
+                end_year: (Time.now.year - 2),
+                placeholder: "#{@user.birth_date}",
+                date_separator: '%s'),'年 ', '月 ') + '日'
+                %>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <%= f.label :raising_experience,
+            class: "col-md-5 col-form-label text-md-left" do
+              %>
+              生き物の飼育経験
+              <span class="ml-1 zerowan-require-input-label">
+                <span class="zerowan-require-input-label-text">必須</span>
+              </span>
+            <% end %>
+              <div class="col-md-7">
+                <%= f.select :raising_experience,
+                [['無し',false],['有り',true]],
+                placeholder: "#{@user.raising_experience}", include_blank: false %>
+              </div>
+          </div>
+          <div class='btn-toolbar w-100' >
+            <button type="button" class="btn btn-outline-dark col-6" style="background-color:white">
+              <%= link_to("マイページ", mypage_users_path, {class: "btn-style-change"}) %>
+            </button>
+            <button type="submit" class="btn submit-button btn-success col-6">
+              更新
+            </button>
+          </div>
+        <% end %>
+    </div>
+  </div>
+</div>
+</div>

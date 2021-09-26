@@ -1,0 +1,75 @@
+<div class="container">
+<div class="zerowantop">
+  <%= image_tag 'zerowan_top01'%>
+  <span>保護動物をなくそう</span>
+  <P>ゼロわん</P>
+</div>
+<div class="search-pets">
+  <p>絞り込み検索</p>
+    <%= search_form_for @q, url: search_top_index_path do |f| %>
+    <div class="row">
+      <div class="col-sm-2">
+        <%= f.select :category,
+          Pet.categories.keys.map {|k| [k, k]},
+          {prompt:"種類▼"},
+          {class: 'form-control', required: true }
+        %>
+      </div>
+      <div class="col-sm-2">
+        <%= f.select :animal_type,
+          Pet.animal_types.keys.map {|k| [k, k]},
+          {prompt:"種別▼"},
+          {class: 'form-control', required: true }
+        %>
+      </div>
+      <div class="col-sm-2">
+        <%= f.select :gender,
+          Pet.genders.keys.map {|k| [k, k]},
+          {prompt:"性別▼"},
+          {class: 'form-control', required: true }
+        %>
+      </div>
+      <div class="col-sm-2">
+        <%= f.select :avairable_area,
+          Pet.avairable_areas.keys.map {|k| [k, k]},
+          {prompt:"地域▼"},
+          {class: 'form-control', required: true }
+        %>
+      </div>
+      <div class="col-sm-2">
+        <%= f.select :age,
+          Pet.ages.keys.map {|k| [k, k]},
+          {prompt:"年齢▼"},
+          {class: 'form-control', required: true }
+        %>
+      </div>
+      <div class="col-sm-2">
+        <%= f.submit '検索', class:"search-btn"%>
+      </div>
+    <% end %>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <% @pets.each do |pet| %>
+    <div class="col-sm ">
+    <div class="post-profile">
+    <div><%= image_tag pet.image1.url , class: "circle" %></div>
+    <div class="pet-profile">
+    <div class="pet-description">種別：<%= pet.animal_type %></div>
+    <div class="pet-description">名前：<%= pet.name %></div>
+    <div class="pet-description">性別：<%= pet.gender %></div>
+    <div class="pet-description">去勢：<%= pet.castration %></div>
+    <div class="pet-description">性格：<%= pet.character %></div>
+    <div class="pet-description">地域：<%= pet.avairable_area %></div>
+    <div class="pet-description">詳細：<%= pet.description %></div>
+    <% if user_signed_in? %>
+      <div><%= link_to "詳細", top_path(pet) %></div>
+      <% end %>
+  </div>
+<br>
+</div>
+</div>
+  <% end %>
+  </div>
+  <%= paginate @pets %>

@@ -1,0 +1,71 @@
+// Place all the styles related to the Pets controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+hr {
+  margin: 5px, 0px, 0px;
+}
+
+li {
+  text-align:left;
+  font-size: 18px;
+  }
+
+.button-design {
+  text-decoration: none;
+  color: rgb(252, 249, 249);
+}
+
+.button-design2 {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+.image_background{
+  background-color: rgb(0, 0, 0);
+}
+
+.pet_image_background{
+  background-color: gray;
+  width: 80%;
+  height: 40vh;
+  margin: auto;
+}
+
+.pet_image img{
+  height: 40vh;
+  width: auto;
+  margin: auto;
+}
+
+.pet_content_background{
+  margin: auto;
+  width: 80%;
+  background-color: white;
+  border: 1px solid;
+  position: relative;
+}
+
+.btn-position {
+  width: 30%;
+  position: absolute;
+  right: 10%;
+  bottom: 16%;
+  border-radius: 20px;
+}
+
+.btn-position2 {
+  width: 30%;
+  position: absolute;
+  left: 10%;
+  bottom: 0%;
+  border-radius: 20px;
+}
+
+.btn-position3 {
+  width: 30%;
+  position: absolute;
+  right: 10%;
+  bottom: 0%;
+  border-radius: 20px;
+}

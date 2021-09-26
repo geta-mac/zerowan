@@ -1,0 +1,127 @@
+<div style="height: 100vh;">
+<div class="container">
+  <h1>投稿画面</h1>
+    <%= form_with model: @pet do |f| %>
+      <div class="form-group row">
+      <%= f.label :category, "", class: "col-md-5 col-form-label text-md-left" do %>
+        カテゴリー
+      <% end %>
+        <div class="col-md-7">
+        <%= f.select :category, Pet.categories.keys, {} %>
+        <%= f.select :animal_type, Pet.animal_types.keys, {} %>
+        </div>
+      </div>
+    <hr>
+      <div class="form-group row">
+        <%= f.label :avairable_area,
+          "",
+          class: "col-md-5 col-form-label text-md-left" do %>
+          受け渡し地域
+        <% end %>
+        <div class="col-md-7">
+          <%= f.select :avairable_area, Pet.avairable_areas.keys, {} %>
+        </div>
+      </div>
+    <hr>
+      <div class="form-group row">
+        <%= f.label :name, "", class: "col-md-5 col-form-label text-md-left" do %>
+          名前
+        <% end %>
+        <div class="col-md-7">
+        <%=f.text_field :name,
+          class: "form-control zerowan-login-input",
+          autocomplete: "name"
+          %>
+        </div>
+      </div>
+    <hr>
+      <div class="form-group row">
+        <%= f.label :gender, "", class: "col-md-5 col-form-label text-md-left" do %>
+          性別
+        <% end %>
+        <div class="col-md-7 mt-1">
+        <%= f.select :gender, Pet.genders.keys, {} %>
+        </div>
+      </div>
+    <hr>
+      <div class="form-group row">
+        <%= f.label :name,
+          "castration",
+          class: "col-md-5 col-form-label text-md-left" do %>
+          去勢・避妊手術
+        <% end %>
+        <div class="col-md-7">
+          <%= f.radio_button :castration, :有り %>
+          <%= f.label :castration, "有り",　style: "display: inline-block;" %>
+          <%= f.radio_button :castration, :無し %>
+          <%= f.label :castration, "無し", style: "display: inline-block;" %>
+          <%= f.radio_button :castration, :予定有り %>
+          <%= f.label :castration, "予定有り", style: "display: inline-block;" %>
+        </div>
+      </div>
+    <hr>
+      <div class="form-group row">
+        <%= f.label :age, "", class: "col-md-5 col-form-label text-md-left" do %>
+          年齢
+        <% end %>
+        <div class="col-md-7">
+        <%= f.select :age, Pet.ages.keys, {} %>
+        </div>
+      </div>
+    <hr>
+      <div class="form-group row">
+        <%= f.label :character, "", class: "col-md-5 col-form-label text-md-left" do %>
+          性格
+        <% end %>
+        <div class="col-md-7">
+          <%= f.select :character, Pet.characters.keys, {} %>
+        </div>
+      </div>
+    <hr>
+      <div class="form-group row">
+        <%= f.label :description,
+          "",
+          class:
+          "col-md-5 col-form-label text-md-left" do %>
+          コメント
+        <% end %>
+        <div class="col-md-7">
+        <%=f.text_field :description,
+          class: "form-control zerowan-login-input"
+          %>
+        </div>
+      </div>
+    <hr>
+      <div class="form-group row">
+        <%= f.label :name, "", class: "col-md-5 col-form-label text-md-left" do %>
+          画像
+        <% end %>
+        <div class="col-md-7">
+        <li><%= f.label :image1 %>
+          <%= f.file_field :image1 %>
+        </li>
+        <li><%= f.label :image2 %>
+          <%= f.file_field :image2 %>
+        </li>
+        <li><%= f.label :image3 %>
+          <%= f.file_field :image3 %>
+        </li>
+        <li><%= f.label :image4 %>
+          <%= f.file_field :image4 %>
+        </li>
+        </div>
+      </div>
+    <hr>
+      <div class='btn-toolbar w-100' >
+        <button type="button"
+          class="btn btn-outline-dark col-6"
+          style="background-color:white"
+          >
+          <%= link_to("戻る", pets_path, {class: "btn-style-change"}) %>
+        </button>
+        <button type="submit" class="btn submit-button btn-success col-6">
+          投稿する
+        </button>
+      </div>
+  <% end %>
+<div style="height: 100vh;">

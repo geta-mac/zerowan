@@ -1,0 +1,26 @@
+<div style="height: 100vh;">
+<% provide(:title, 'ユーザー一覧') %>
+<h1>ユーザー一覧</h1>
+
+<table class="table table-bordered">
+<tr>
+<th>メールアドレス</th>
+<th>アクション</th>
+</tr>
+
+<ul class="users">
+  <% @users.each do |user| %>
+<tr>
+    <li>
+        <td><%= user.email %></td>
+
+      <td><%= link_to t('.delete'), user, method: :delete, data: {
+              confirm: "【確認】アカウントを削除してもよろしいですか？"
+      } %></td>
+</tr>
+  <% end %>
+</table>
+
+</ul>
+</div>
+

@@ -1,0 +1,115 @@
+.zerowan-login-input {
+  border-radius: 2px;
+  border: solid 1px #b2b2b2;
+  background-color: #ffffff;
+}
+
+.zerowan-check-label {
+  font-family: YuGo;
+  font-size: 12px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+.zerowan-require-input-label {
+  border-radius: 1px;
+  background-color: #e2001b;
+}
+
+.zerowan-require-input-label-text {
+  font-family: YuGo;
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+}
+
+.submit-button {
+  font-family: YuGo;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #b2b2b2;
+  color: #ffffff;
+  background-color: #0fbe9f!important;
+}
+
+.zerowan-login-text {
+  font-family: YuGo;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0fbe9f;
+}
+
+.zerowan-error-message {
+  width: 100%;
+  margin-top: .25rem;
+  font-size: 80%;
+  color: #e3342f
+}
+
+.fle {
+  flex-direction: row ;
+}
+
+.btn-link-custom  {
+  font-weight: 200;
+  font-size: 0.7em;
+  color: #0d6efd;
+  text-decoration: underline;
+}
+
+.login-button {
+  font-family: YuGo;
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #fff;
+  background-color: #F2A49B;
+  ;
+}
+
+.btn-style-change {
+  text-decoration:none;
+  color: black;
+}
+
+
+.list-group-item{
+  display: flex;
+  justify-content: center;/*左右中央揃え*/
+  align-items: center;     /*上下中央揃え*/
+  text-decoration:none;
+  height: 80px;
+  font-size: 25px;
+}
+
+.content-card {
+  height:60px;
+  text-align:center;
+  position:relative;
+  text-decoration:none;
+}
+
+.mypage-frame {
+  width: 80%;
+  margin: auto;
+}
+

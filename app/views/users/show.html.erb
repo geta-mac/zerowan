@@ -1,0 +1,27 @@
+<div style="height: 100vh;">
+<h1> お気に入り一覧 </h1>
+<% if @favorite_list.present? %>
+  <div class="row">
+    <% @favorite_list.each do |pet| %>
+    <div class="col-sm ">
+    <div class="post-profile">
+      <div><%= image_tag pet.image1.url , class: "circle" %></div>
+      <div class="pet-profile">
+      <div class="pet-description">種別：<%= pet.animal_type %></div>
+      <div class="pet-description">名前：<%= pet.name %></div>
+      <div class="pet-description">性別：<%= pet.gender %></div>
+      <div class="pet-description">去勢：<%= pet.castration %></div>
+      <div class="pet-description">性格：<%= pet.character %></div>
+      <div class="pet-description">地域：<%= pet.avairable_area %></div>
+      <div class="pet-description">詳細：<%= pet.description %></div>
+      <% if user_signed_in? %>
+      <div><%= link_to "詳細画面へ", top_path(pet) %></div>
+      </div>
+      <% end %>
+    <br>
+    </div>
+    </div>
+    <% end %>
+  </div>
+<% end %>
+</div>
