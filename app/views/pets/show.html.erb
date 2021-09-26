@@ -1,4 +1,4 @@
-<div>
+<div style="height: 100vh;">
   <div class="image_background">
     <div class="pet_image_background">
       <div class="pet_image">
@@ -29,22 +29,26 @@
   <br>
   <br>
 
-  <button type="button" class="btn btn-secondary btn-position" >
-    <%= link_to "編集", edit_pet_path(@pet), class: "button-design" %>
-  </button>
-
+  <%= link_to edit_pet_path(@pet) do %>
+    <button type="button" class="btn btn-secondary btn-position button-design" >
+      編集
+    </button>
+  <% end %>
   <br>
 
-  <button type="button" class="btn btn-outline-dark btn-position2" >
-    <%= link_to "戻る", pets_path, class: "button-design2" %>
-  </button>
-  <button type="button" class="btn btn-danger btn-position3" >
-    <%= link_to("削除",
-                pet_path(@pet),
-                { method: :delete,
-                data: {confirm: '本当に削除してもいいですか?'},
-                class: "button-design"})
+  <%= link_to '/pets' do %>
+    <button type="button" class="btn btn-outline-dark btn-position2 button-design2" >
+      戻る
+    </button>
+  <% end %>
+  <%= link_to(pet_path(@pet),
+              { method: :delete,
+              data: {confirm: '本当に削除してもいいですか?'},
+              class: "button-design"}) do
     %>
-  </button>
+    <button type="button" class="btn btn-danger btn-position3" >
+      削除
+    </button>
+  <% end %>
   </div>
 </div>

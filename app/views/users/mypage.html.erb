@@ -1,101 +1,42 @@
-<% provide(:title, "マイページ") %>
-  <div class="container w-80">
-    <h1>マイページ</h1>
+<div style="height: 100vh;">
+<div class="container">
+  <h1>マイページ</h1>
+</div>
 
-    <hr>
+<div class="mypage-frame">
 
-      <%= link_to( "mypage/edit",class: "decoration change") do %>
-        <div class="d-flex justify-content-between">
-          <div class="row">
-            <div class="col-9 d-flex align-items-center ml-2 mt-3 ">
-              <div class="d-flex flex-column", style="margin-left: 13px">
-                <label for="user-name">登録内容変更</label>
-                <p>登録内容を変更できます</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      <% end %>
+    <%= link_to( "mypage/edit") do %>
+      <div class="list-group-item">プロフィール情報の入力・編集  </div>
+    <% end %>
 
-    <hr>
-
-      <%= link_to( 'user_path', class: "decoration change") do %>
-        <div class="d-flex justify-content-between">
-          <div class="row">
-            <div class="col-9 d-flex align-items-center ml-3 mt-3">
-              <div class="d-flex flex-column", style="margin-left: 4px">
-                <label for="user-name">お気に入り一覧</label>
-                <p>お気に入りを確認できます</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      <% end %>
-
-    <hr>
-
-      <%= link_to( '/matching' , class: "decoration change") do %>
-        <div class="d-flex justify-content-between">
-          <div class="row">
-            <div class="col-9 d-flex align-items-center ml-2 mt-3">
-              <div class="d-flex flex-column", style="margin-left: 13px">
-                <label for="user-name">チャット一覧</label>
-                <p>チャットの一覧です</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      <% end %>
-
-    <hr>
-
-      <%= link_to( '/pets' , class: "decoration change") do %>
-        <div class="d-flex justify-content-between">
-          <div class="row">
-            <div class="col-9 d-flex align-items-center ml-2 mt-3">
-              <div class="d-flex flex-column", style="margin-left: 13px">
-                <label for="user-name">投稿一覧</label>
-                <p>自分の投稿内容を確認できます</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      <% end %>
-
-    <hr>
-
-      <%= link_to(
-        destroy_user_session_path,
-        method: :delete,
-        class: "decoration change" ) do
-        %>
-        <div class="d-flex justify-content-between">
-          <div class="row">
-            <div class="col-9 d-flex align-items-center ml-2 mt-3">
-              <div class="d-flex flex-column", style="margin-left: 23px">
-                <label for="user-name">ログアウト</label>
-                <p>ログアウトします</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      <% end %>
-
-    <hr>
-
-      <%= link_to( '#' , class: "decoration change") do %>
-        <div class="d-flex justify-content-between">
-          <div class="row">
-            <div class="col-9 d-flex align-items-center ml-2 mt-3">
-              <div class="d-flex flex-column", style="margin-left: 13px">
-                <label for="user-name">退会手続き</label>
-                <p>退会のお手続きが出来ます</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      <% end %>
-
-    <hr>
-
+  <div>
+    <%= link_to( 'user_path', class: "decoration change") do %>
+    <div class="list-group-item">お気に入り一覧</div>
+    <% end %>
   </div>
+  <div>
+    <%= link_to( '/matching' , class: "decoration change") do %>
+    <div class="list-group-item">チャット一覧</div>
+    <% end %>
+  </div>
+  <div>
+    <%= link_to( '/pets' , class: "decoration change") do %>
+    <div class="list-group-item">投稿一覧</div>
+    <% end %>
+    </div>
+    <div>
+    <%= link_to(
+      destroy_user_session_path,
+      method: :delete,
+      class: "decoration change" ) do
+      %>
+          <div class="list-group-item">ログアウト</div>
+          <% end %>
+    </div>
+    <div>
+          <%= link_to( '#' , class: "decoration change") do %>
+          <div class="list-group-item">退会手続き</div>
+          <% end %>
+    </div>
+</div>
+</div>

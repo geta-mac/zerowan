@@ -1,8 +1,9 @@
+<div style="height: 100vh;">
 <div class="matching-index-page">
 
   <div class="matching">
-    <p class="matching-title ml-3">メッセージ</p>
-    <p class="matching-num">お問い合わせ <%= @match_users.size %>人</p>
+    <h1 class="matching-title ml-3">メッセージ</h1>
+    <h4 class="matching-num">お問い合わせ <%= @match_users.size %>人</h4>
 
     <div class="matching__list">
       <% unless @match_users.empty? %>
@@ -10,11 +11,10 @@
 
           <%= link_to chat_rooms_path(params: { user_id: user.id }), method: :post do %>
             <div class="matching__person">
-
+        <br>
               <div class="matching__person-name">
-                <%= user.name %>
+                <h4><%= user.name %>さん</h4>
               </div>
-
             </div>
           <% end %>
         <% end %>
@@ -22,4 +22,5 @@
     </div>
   </div>
 
+</div>
 </div>
