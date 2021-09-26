@@ -15,6 +15,7 @@
 	height:250px;
 	object-fit:cover;
 	border-radius:50%;
+  border: 1px solid rgb(184, 197, 243) ;
 }
 
 // .topimage{
@@ -61,7 +62,14 @@
 
 .pet-profile{
   background:rgb(184, 187, 223);
-  position:relative;
+  margin: auto;
+  width: 90%;
+  display: grid;
+}
+
+.pet-description {
+  padding-left: 20%;
+  text-align: left
 }
 
 .search-pets{

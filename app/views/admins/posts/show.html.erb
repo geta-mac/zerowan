@@ -1,3 +1,4 @@
+
 <% @post_pets.each do |pet| %>
     <div class="col-sm ">
     <div class="post-profile">
@@ -17,7 +18,7 @@
       <% if admin_signed_in? %>
       <li><%= link_to "詳細", pet_path(pet) %></li>
       <li><%= link_to t('.delete'), pet, method: :delete, data: {
-              confirm: "【確認】投稿を削除してもよろしいですか？" 
+              confirm: "【確認】投稿を削除してもよろしいですか？"
       } %></li>
       </div>
       <% end %>

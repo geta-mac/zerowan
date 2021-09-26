@@ -1,4 +1,4 @@
-<div>
+<div style="height: 100vh;">
   <div class="image_background">
     <div class="pet_image_background">
         <div class="pet_image">
@@ -29,11 +29,12 @@
 
   <br>
   <br>
-
+  <hr>
       <div id="favorite_<%= @pet.id %>" class="favorite_design">
         <%= render 'favorites/favorite', pet: @pet %>
       </div>
       <%  current_user.id == @pet.user_id %> <%# 投稿者とユーザーの振り分け　%>
+      <hr>
         <%= form_with( url: reactions_path, local: true) do |form| %>
           <div class=""></div>
           <%= form.hidden_field :from_user_id, value: current_user.id %>
@@ -41,7 +42,8 @@
           <%= form.hidden_field :to_pet_id, value: @pet.id %>
           <%= form.hidden_field :status, value: "like" %>
           <%= form.submit "問合せ申請する", class: "submit-btn" %>
-        <% end %>
+        <hr>
+          <% end %>
 
 
       <div>
@@ -61,6 +63,7 @@
 
         </ul>
         <% end %>
+      <hr>
       </div>
     </div>
 </div>
